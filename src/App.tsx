@@ -1,56 +1,123 @@
+import { FormEvent, useState } from "react"
 import { EventFrom } from "./EventForm"
 import { PaymentForm } from "./PaymentForm"
 import { TeamForm } from "./TeamForm"
 import { UserForm } from "./UserForm"
 import { multi } from "./multi"
+import logo  from "./assets/logo.jpeg"
+
+type FormData = {
+  firstName: string,
+  lastName: string,
+  email: string,
+  age: number,
+  phone: number,
+  uniName: string,
+  semester: string,
+  rollNo: string,
+  teamName: string,
+  members: number,
+  firstNameMem2: string,
+  lastNameMem2: string,
+  ageMem2: number,
+  phoneMem2: number,
+  semesterMem2: string,
+  uniNameMem2: string
+  firstNameMem3: string,
+  lastNameMem3: string,
+  ageMem3: number,
+  phoneMem3: number,
+  semesterMem3: string,
+  uniNameMem3: string
+  firstNameMem4: string,
+  lastNameMem4: string,
+  ageMem4: number,
+  phoneMem4: number,
+  semesterMem4: string,
+  uniNameMem4: string,
+  event: string[]
+}
+
+const initalData: FormData = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  age: 0,
+  phone: 0,
+  uniName: "",
+  semester: "",
+  rollNo: "",
+  teamName: "",
+  members: 0,
+  firstNameMem2: "",
+  lastNameMem2: "",
+  ageMem2: 0,
+  phoneMem2: 0,
+  semesterMem2: "",
+  uniNameMem2: "",
+  firstNameMem3: "",
+  lastNameMem3: "",
+  ageMem3: 0,
+  phoneMem3: 0,
+  semesterMem3: "",
+  uniNameMem3: "",
+  firstNameMem4: "",
+  lastNameMem4: "",
+  ageMem4: 0,
+  phoneMem4: 0,
+  semesterMem4: "",
+  uniNameMem4: "",
+  event: [""]
+}
 
 function App() {
-  const{steps,currentStepIndex,step,FirstStep,back,next,LastStep}= multi([
+
+  const [data, setData] = useState(initalData);
+  const [prices, setPrices] = useState<number>(0);
+
+  const updateFields = (fields: any) => {
+    setData((prev) => {
+      return { ...prev, ...fields }
+    })
+  }
+
+
+  const { steps, currentStepIndex, step, FirstStep, back, next, LastStep } = multi([
     <div>Start</div>,
-    <UserForm/>,
-    <TeamForm/>,
-    <EventFrom/>,
-    <PaymentForm/>,
+    <UserForm {...data} updateFields={updateFields} />,
+    <TeamForm {...data} updateFields={updateFields} />,
+    <EventFrom {...data} updateFields={updateFields} prices={prices} setPrices={setPrices} />,
+    <PaymentForm prices={prices} />,
   ])
-  
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    if (!LastStep) return next();
+    console.log(data);
+  }
+
   return (
-    <div 
-      style={{
-        position: "relative", 
-        background: "#FAF9F6",
-        border:"3px outset blue" ,
-        padding: "2rem",
-        margin: "1rem",
-        borderRadius:"0.7rem",
-        fontFamily:"Verdana",
-      }}
-    >
-      <form>
-        <div style={{position:"absolute",top:".5rem",right:".5rem"}}
-        >
-          {currentStepIndex + 1}/ {steps.length}
+    <>
+      <div className="flex flex-col justify-center items-center">
+        <img src={logo} alt="logo" width={400}/>
+        <h1 className="font-bold text-4xl">InnoSkill 2024</h1>
+      </div>
+      <div className="p-10">
+        <form className="border-2 rounded-xl border-black p-10 flex flex-col items-center bg-slate-50" onSubmit={handleSubmit}>
+          <div>
+            {currentStepIndex + 1}/ {steps.length}
+          </div>
+          {step}
+          <div>
+            {!FirstStep && <button type="button" className="navbutton" onClick={back}>Back</button>}
+            <button type="button" className="navbutton" onClick={handleSubmit}>
+              {LastStep ? "Finish" : "Next"}
 
-        </div>
-        {step}
-        <div
-          style={{
-            marginTop: "2rem",
-            display: "flex",
-            gap: ".5rem",
-            justifyContent: "flex-end",
-
-          }}
-        >
-          {!FirstStep && <button type="button" onClick={back}>Back</button>}
-          <button type="button" onClick={next}>
-            {LastStep ? "Finish":"Next"}
-          </button>
-
-        </div>
-
-       
-      </form>
-    </div>
+            </button>
+          </div>
+        </form>
+      </div>
+    </>
   )
 }
 
