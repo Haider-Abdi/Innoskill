@@ -260,8 +260,25 @@ img, video {
   right: 2.5rem;
 }
 
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .flex-col {
@@ -276,6 +293,10 @@ img, video {
   justify-content: center;
 }
 
+.rounded-lg {
+  border-radius: .5rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -285,17 +306,26 @@ img, video {
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+}
+
 .p-10 {
   padding: 2.5rem;
 }
 
-.p-5 {
-  padding: 1.25rem;
+.p-2 {
+  padding: .5rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
+.p-5 {
+  padding: 1.25rem;
 }
 
 .text-2xl {
@@ -303,8 +333,23 @@ img, video {
   line-height: 2rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .font-bold {
   font-weight: 700;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .shadow-lg {
@@ -313,13 +358,27 @@ img, video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.filter {
+.outline-8 {
+  outline-width: 8px;
+}
+
+.drop-shadow-\[0_1\.2px_1\.2px_rgba\(0\,0\,0\,0\.8\)\] {
+  --tw-drop-shadow: drop-shadow(0 1.2px 1.2px #000c);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 body {
-  background-color: #fff;
+  opacity: .925;
+  background-image: url("background.c3578f42.jpg");
   font-family: Poppins, sans-serif;
+}
+
+body:before {
+  content: "";
+  z-index: -1;
+  background-color: #000000b3;
+  position: absolute;
+  inset: 0;
 }
 
 .userFormInput {
@@ -27540,41 +27599,31 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _useMultiForm = require("./hooks/useMultiForm");
 var _userForm = require("./components/UserForm");
 var _eventForm = require("./components/EventForm");
-var _teamForm = require("./components/TeamForm");
+// import { TeamForm } from "./components/TeamForm";
 var _paymentForm = require("./components/PaymentForm");
+var _mrlogoPng = require("./assets/mrlogo.png");
+var _mrlogoPngDefault = parcelHelpers.interopDefault(_mrlogoPng);
 var _s = $RefreshSig$();
+// import background from "./assets/background.jpg";
 const initalData = {
     firstName: "",
     lastName: "",
     email: "",
     age: 0,
     phone: 0,
+    option: "",
     uniName: "",
     semester: "",
     rollNo: "",
     teamName: "",
-    members: 0,
-    firstNameMem2: "",
-    lastNameMem2: "",
-    ageMem2: 0,
-    phoneMem2: 0,
-    semesterMem2: "",
-    uniNameMem2: "",
-    firstNameMem3: "",
-    lastNameMem3: "",
-    ageMem3: 0,
-    phoneMem3: 0,
-    semesterMem3: "",
-    uniNameMem3: "",
-    firstNameMem4: "",
-    lastNameMem4: "",
-    ageMem4: 0,
-    phoneMem4: 0,
-    semesterMem4: "",
-    uniNameMem4: "",
-    event: [
-        ""
-    ]
+    vertical1: [],
+    vertical2: [],
+    vertical3: [],
+    vertical4: [],
+    vertical5: [],
+    vertical6: [],
+    vertical7: [],
+    vertical8: []
 };
 const App = ()=>{
     _s();
@@ -27590,10 +27639,11 @@ const App = ()=>{
     };
     const { steps, currentStepIndex, step, FirstStep, back, next, LastStep } = (0, _useMultiForm.useMultiForm)([
         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            children: "Start"
+            className: "font-bold text-2xl",
+            children: "Register Here"
         }, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 53,
+            lineNumber: 44,
             columnNumber: 9
         }, undefined),
         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userForm.UserForm), {
@@ -27601,17 +27651,10 @@ const App = ()=>{
             updateFields: updateFields
         }, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 54,
+            lineNumber: 45,
             columnNumber: 9
         }, undefined),
-        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _teamForm.TeamForm), {
-            ...data,
-            updateFields: updateFields
-        }, void 0, false, {
-            fileName: "src/App.js",
-            lineNumber: 55,
-            columnNumber: 9
-        }, undefined),
+        // <TeamForm {...data} updateFields={updateFields} />,
         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _eventForm.EventFrom), {
             ...data,
             updateFields: updateFields,
@@ -27619,14 +27662,14 @@ const App = ()=>{
             setPrices: setPrices
         }, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 56,
+            lineNumber: 47,
             columnNumber: 9
         }, undefined),
         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _paymentForm.PaymentForm), {
             prices: prices
         }, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 57,
+            lineNumber: 48,
             columnNumber: 9
         }, undefined)
     ]);
@@ -27639,17 +27682,44 @@ const App = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "flex flex-col justify-center items-center",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    className: "font-bold text-4xl",
-                    children: "InnoSkill 2024"
-                }, void 0, false, {
-                    fileName: "src/App.js",
-                    lineNumber: 70,
-                    columnNumber: 17
-                }, undefined)
-            }, void 0, false, {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: (0, _mrlogoPngDefault.default),
+                        alt: "MRIIRS Logo",
+                        width: 500
+                    }, void 0, false, {
+                        fileName: "src/App.js",
+                        lineNumber: 60,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "font-bold text-4xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white",
+                        children: "7th Edition"
+                    }, void 0, false, {
+                        fileName: "src/App.js",
+                        lineNumber: 61,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "font-bold text-6xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] outline-8 text-white",
+                        children: "InnoSkill 2024"
+                    }, void 0, false, {
+                        fileName: "src/App.js",
+                        lineNumber: 62,
+                        columnNumber: 17
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "font-bold text-4xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white",
+                        children: "3rd-4th April,2024"
+                    }, void 0, false, {
+                        fileName: "src/App.js",
+                        lineNumber: 63,
+                        columnNumber: 17
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "src/App.js",
-                lineNumber: 68,
+                lineNumber: 59,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27668,7 +27738,7 @@ const App = ()=>{
                                     children: "Back"
                                 }, void 0, false, {
                                     fileName: "src/App.js",
-                                    lineNumber: 79,
+                                    lineNumber: 72,
                                     columnNumber: 40
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27678,24 +27748,24 @@ const App = ()=>{
                                     children: LastStep ? "Finish" : "Next"
                                 }, void 0, false, {
                                     fileName: "src/App.js",
-                                    lineNumber: 80,
+                                    lineNumber: 73,
                                     columnNumber: 25
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/App.js",
-                            lineNumber: 78,
+                            lineNumber: 71,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/App.js",
-                    lineNumber: 73,
+                    lineNumber: 66,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 72,
+                lineNumber: 65,
                 columnNumber: 13
             }, undefined)
         ]
@@ -27716,7 +27786,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./hooks/useMultiForm":"9uLiM","./components/UserForm":"lPxXI","./components/EventForm":"2Em77","./components/TeamForm":"2ukha","./components/PaymentForm":"8EXQV"}],"gkKU3":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./hooks/useMultiForm":"9uLiM","./components/UserForm":"lPxXI","./components/EventForm":"2Em77","./components/PaymentForm":"8EXQV","./assets/mrlogo.png":"9JDXQ"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27943,9 +28013,16 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "UserForm", ()=>UserForm);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _reactDropdown = require("react-dropdown");
+var _reactDropdownDefault = parcelHelpers.interopDefault(_reactDropdown);
 var _formWrapper = require("./FormWrapper");
 var _formWrapperDefault = parcelHelpers.interopDefault(_formWrapper);
-function UserForm({ firstName, lastName, email, age, phone, uniName, semester, rollNo, updateFields }) {
+var _styleCss = require("react-dropdown/style.css");
+const options = [
+    "School",
+    "University"
+];
+function UserForm({ firstName, lastName, email, age, phone, option, uniName, semester, rollNo, teamName, updateFields }) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formWrapperDefault.default), {
         title: "Enter Your Details",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27955,7 +28032,7 @@ function UserForm({ firstName, lastName, email, age, phone, uniName, semester, r
                     children: "First Name"
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 18,
+                    lineNumber: 26,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -27969,14 +28046,14 @@ function UserForm({ firstName, lastName, email, age, phone, uniName, semester, r
                         })
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 19,
+                    lineNumber: 27,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                     children: "Last Name"
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 21,
+                    lineNumber: 29,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -27989,14 +28066,14 @@ function UserForm({ firstName, lastName, email, age, phone, uniName, semester, r
                         })
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 22,
+                    lineNumber: 30,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                     children: "Email-ID"
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 24,
+                    lineNumber: 32,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -28009,14 +28086,14 @@ function UserForm({ firstName, lastName, email, age, phone, uniName, semester, r
                         })
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 25,
+                    lineNumber: 33,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                     children: "Age"
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 27,
+                    lineNumber: 35,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -28030,14 +28107,14 @@ function UserForm({ firstName, lastName, email, age, phone, uniName, semester, r
                         })
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 28,
+                    lineNumber: 36,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                     children: "Contact Number"
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 30,
+                    lineNumber: 38,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -28051,14 +28128,37 @@ function UserForm({ firstName, lastName, email, age, phone, uniName, semester, r
                         })
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 31,
+                    lineNumber: 39,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                    className: "bg-white p-2 my-5",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDropdownDefault.default), {
+                        options: options,
+                        onChange: (selectedOption)=>{
+                            updateFields({
+                                option: selectedOption.value
+                            });
+                            console.log(selectedOption.value);
+                        },
+                        value: option,
+                        placeholder: "Select an option",
+                        className: ""
+                    }, void 0, false, {
+                        fileName: "src/components/UserForm.js",
+                        lineNumber: 43,
+                        columnNumber: 21
+                    }, this)
+                }, void 0, false, {
+                    fileName: "src/components/UserForm.js",
+                    lineNumber: 42,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                     children: "University/School Name"
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 33,
+                    lineNumber: 54,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -28071,14 +28171,14 @@ function UserForm({ firstName, lastName, email, age, phone, uniName, semester, r
                         })
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 34,
+                    lineNumber: 55,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                     children: "Class/Semester"
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 36,
+                    lineNumber: 57,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -28091,14 +28191,14 @@ function UserForm({ firstName, lastName, email, age, phone, uniName, semester, r
                         })
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 37,
+                    lineNumber: 58,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                     children: "University/School Roll Number"
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 39,
+                    lineNumber: 60,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -28111,18 +28211,39 @@ function UserForm({ firstName, lastName, email, age, phone, uniName, semester, r
                         })
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 40,
+                    lineNumber: 61,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                    children: "Team Name"
+                }, void 0, false, {
+                    fileName: "src/components/UserForm.js",
+                    lineNumber: 63,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                    autoFocus: true,
+                    required: true,
+                    type: "text",
+                    value: teamName,
+                    onChange: (e)=>updateFields({
+                            teamName: e.target.value
+                        }),
+                    className: "userFormInput"
+                }, void 0, false, {
+                    fileName: "src/components/UserForm.js",
+                    lineNumber: 64,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/components/UserForm.js",
-            lineNumber: 16,
+            lineNumber: 25,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "src/components/UserForm.js",
-        lineNumber: 15,
+        lineNumber: 24,
         columnNumber: 9
     }, this);
 }
@@ -28135,7 +28256,7 @@ $RefreshReg$(_c, "UserForm");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./FormWrapper":"iKWEe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iKWEe":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","./FormWrapper":"iKWEe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-dropdown":"gbCO1","react-dropdown/style.css":"6E1S7"}],"iKWEe":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9c81 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28174,7 +28295,399 @@ $RefreshReg$(_c, "FormWrapper");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2Em77":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gbCO1":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports["default"] = void 0;
+var _react = _interopRequireWildcard(require("65bde529cb301e22"));
+var _classnames = _interopRequireDefault(require("70e5c9bfe23b017b"));
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        "default": obj
+    };
+}
+function _getRequireWildcardCache() {
+    if (typeof WeakMap !== "function") return null;
+    var cache = new WeakMap();
+    _getRequireWildcardCache = function _getRequireWildcardCache() {
+        return cache;
+    };
+    return cache;
+}
+function _interopRequireWildcard(obj) {
+    if (obj && obj.__esModule) return obj;
+    if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") return {
+        "default": obj
+    };
+    var cache = _getRequireWildcardCache();
+    if (cache && cache.has(obj)) return cache.get(obj);
+    var newObj = {};
+    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+    for(var key in obj)if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
+        else newObj[key] = obj[key];
+    }
+    newObj["default"] = obj;
+    if (cache) cache.set(obj, newObj);
+    return newObj;
+}
+function _typeof(obj) {
+    if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") _typeof = function _typeof(obj) {
+        return typeof obj;
+    };
+    else _typeof = function _typeof(obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+    return _typeof(obj);
+}
+function _extends() {
+    _extends = Object.assign || function(target) {
+        for(var i = 1; i < arguments.length; i++){
+            var source = arguments[i];
+            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+        }
+        return target;
+    };
+    return _extends.apply(this, arguments);
+}
+function ownKeys(object, enumerableOnly) {
+    var keys = Object.keys(object);
+    if (Object.getOwnPropertySymbols) {
+        var symbols = Object.getOwnPropertySymbols(object);
+        if (enumerableOnly) symbols = symbols.filter(function(sym) {
+            return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+        });
+        keys.push.apply(keys, symbols);
+    }
+    return keys;
+}
+function _objectSpread(target) {
+    for(var i = 1; i < arguments.length; i++){
+        var source = arguments[i] != null ? arguments[i] : {};
+        if (i % 2) ownKeys(source, true).forEach(function(key) {
+            _defineProperty(target, key, source[key]);
+        });
+        else if (Object.getOwnPropertyDescriptors) Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+        else ownKeys(source).forEach(function(key) {
+            Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+        });
+    }
+    return target;
+}
+function _defineProperty(obj, key, value) {
+    if (key in obj) Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+    });
+    else obj[key] = value;
+    return obj;
+}
+function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) throw new TypeError("Cannot call a class as a function");
+}
+function _defineProperties(target, props) {
+    for(var i = 0; i < props.length; i++){
+        var descriptor = props[i];
+        descriptor.enumerable = descriptor.enumerable || false;
+        descriptor.configurable = true;
+        if ("value" in descriptor) descriptor.writable = true;
+        Object.defineProperty(target, descriptor.key, descriptor);
+    }
+}
+function _createClass(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties(Constructor, staticProps);
+    return Constructor;
+}
+function _possibleConstructorReturn(self, call) {
+    if (call && (_typeof(call) === "object" || typeof call === "function")) return call;
+    return _assertThisInitialized(self);
+}
+function _getPrototypeOf(o) {
+    _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+        return o.__proto__ || Object.getPrototypeOf(o);
+    };
+    return _getPrototypeOf(o);
+}
+function _assertThisInitialized(self) {
+    if (self === void 0) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return self;
+}
+function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) throw new TypeError("Super expression must either be null or a function");
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+        constructor: {
+            value: subClass,
+            writable: true,
+            configurable: true
+        }
+    });
+    if (superClass) _setPrototypeOf(subClass, superClass);
+}
+function _setPrototypeOf(o, p) {
+    _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+        o.__proto__ = p;
+        return o;
+    };
+    return _setPrototypeOf(o, p);
+}
+var DEFAULT_PLACEHOLDER_STRING = "Select...";
+var Dropdown = /*#__PURE__*/ function(_Component) {
+    _inherits(Dropdown, _Component);
+    function Dropdown(props) {
+        var _this;
+        _classCallCheck(this, Dropdown);
+        _this = _possibleConstructorReturn(this, _getPrototypeOf(Dropdown).call(this, props));
+        _this.state = {
+            selected: _this.parseValue(props.value, props.options) || {
+                label: typeof props.placeholder === "undefined" ? DEFAULT_PLACEHOLDER_STRING : props.placeholder,
+                value: ""
+            },
+            isOpen: false
+        };
+        _this.dropdownRef = (0, _react.createRef)();
+        _this.mounted = true;
+        _this.handleDocumentClick = _this.handleDocumentClick.bind(_assertThisInitialized(_this));
+        _this.fireChangeEvent = _this.fireChangeEvent.bind(_assertThisInitialized(_this));
+        return _this;
+    }
+    _createClass(Dropdown, [
+        {
+            key: "componentDidUpdate",
+            value: function componentDidUpdate(prevProps) {
+                if (this.props.value !== prevProps.value) {
+                    if (this.props.value) {
+                        var selected = this.parseValue(this.props.value, this.props.options);
+                        if (selected !== this.state.selected) this.setState({
+                            selected: selected
+                        });
+                    } else this.setState({
+                        selected: {
+                            label: typeof this.props.placeholder === "undefined" ? DEFAULT_PLACEHOLDER_STRING : this.props.placeholder,
+                            value: ""
+                        }
+                    });
+                }
+            }
+        },
+        {
+            key: "componentDidMount",
+            value: function componentDidMount() {
+                document.addEventListener("click", this.handleDocumentClick, false);
+                document.addEventListener("touchend", this.handleDocumentClick, false);
+            }
+        },
+        {
+            key: "componentWillUnmount",
+            value: function componentWillUnmount() {
+                this.mounted = false;
+                document.removeEventListener("click", this.handleDocumentClick, false);
+                document.removeEventListener("touchend", this.handleDocumentClick, false);
+            }
+        },
+        {
+            key: "handleMouseDown",
+            value: function handleMouseDown(event) {
+                if (this.props.onFocus && typeof this.props.onFocus === "function") this.props.onFocus(this.state.isOpen);
+                if (event.type === "mousedown" && event.button !== 0) return;
+                event.stopPropagation();
+                event.preventDefault();
+                if (!this.props.disabled) this.setState({
+                    isOpen: !this.state.isOpen
+                });
+            }
+        },
+        {
+            key: "parseValue",
+            value: function parseValue(value, options) {
+                var option;
+                if (typeof value === "string") for(var i = 0, num = options.length; i < num; i++){
+                    if (options[i].type === "group") {
+                        var match = options[i].items.filter(function(item) {
+                            return item.value === value;
+                        });
+                        if (match.length) option = match[0];
+                    } else if (typeof options[i].value !== "undefined" && options[i].value === value) option = options[i];
+                }
+                return option || value;
+            }
+        },
+        {
+            key: "setValue",
+            value: function setValue(value, label) {
+                var newState = {
+                    selected: {
+                        value: value,
+                        label: label
+                    },
+                    isOpen: false
+                };
+                this.fireChangeEvent(newState);
+                this.setState(newState);
+            }
+        },
+        {
+            key: "fireChangeEvent",
+            value: function fireChangeEvent(newState) {
+                if (newState.selected !== this.state.selected && this.props.onChange) this.props.onChange(newState.selected);
+            }
+        },
+        {
+            key: "renderOption",
+            value: function renderOption(option) {
+                var _classes;
+                var value = option.value;
+                if (typeof value === "undefined") value = option.label || option;
+                var label = option.label || option.value || option;
+                var isSelected = value === this.state.selected.value || value === this.state.selected;
+                var classes = (_classes = {}, _defineProperty(_classes, "".concat(this.props.baseClassName, "-option"), true), _defineProperty(_classes, option.className, !!option.className), _defineProperty(_classes, "is-selected", isSelected), _classes);
+                var optionClass = (0, _classnames["default"])(classes);
+                var dataAttributes = Object.keys(option.data || {}).reduce(function(acc, dataKey) {
+                    return _objectSpread({}, acc, _defineProperty({}, "data-".concat(dataKey), option.data[dataKey]));
+                }, {});
+                return _react["default"].createElement("div", _extends({
+                    key: value,
+                    className: optionClass,
+                    onMouseDown: this.setValue.bind(this, value, label),
+                    onClick: this.setValue.bind(this, value, label),
+                    role: "option",
+                    "aria-selected": isSelected ? "true" : "false"
+                }, dataAttributes), label);
+            }
+        },
+        {
+            key: "buildMenu",
+            value: function buildMenu() {
+                var _this2 = this;
+                var _this$props = this.props, options = _this$props.options, baseClassName = _this$props.baseClassName;
+                var ops = options.map(function(option) {
+                    if (option.type === "group") {
+                        var groupTitle = _react["default"].createElement("div", {
+                            className: "".concat(baseClassName, "-title")
+                        }, option.name);
+                        var _options = option.items.map(function(item) {
+                            return _this2.renderOption(item);
+                        });
+                        return _react["default"].createElement("div", {
+                            className: "".concat(baseClassName, "-group"),
+                            key: option.name,
+                            role: "listbox",
+                            tabIndex: "-1"
+                        }, groupTitle, _options);
+                    } else return _this2.renderOption(option);
+                });
+                return ops.length ? ops : _react["default"].createElement("div", {
+                    className: "".concat(baseClassName, "-noresults")
+                }, "No options found");
+            }
+        },
+        {
+            key: "handleDocumentClick",
+            value: function handleDocumentClick(event) {
+                if (this.mounted) {
+                    if (!this.dropdownRef.current.contains(event.target)) {
+                        if (this.state.isOpen) this.setState({
+                            isOpen: false
+                        });
+                    }
+                }
+            }
+        },
+        {
+            key: "isValueSelected",
+            value: function isValueSelected() {
+                return typeof this.state.selected === "string" || this.state.selected.value !== "";
+            }
+        },
+        {
+            key: "render",
+            value: function render() {
+                var _classNames, _classNames2, _classNames3, _classNames4, _classNames5;
+                var _this$props2 = this.props, baseClassName = _this$props2.baseClassName, controlClassName = _this$props2.controlClassName, placeholderClassName = _this$props2.placeholderClassName, menuClassName = _this$props2.menuClassName, arrowClassName = _this$props2.arrowClassName, arrowClosed = _this$props2.arrowClosed, arrowOpen = _this$props2.arrowOpen, className = _this$props2.className;
+                var disabledClass = this.props.disabled ? "Dropdown-disabled" : "";
+                var placeHolderValue = typeof this.state.selected === "string" ? this.state.selected : this.state.selected.label;
+                var dropdownClass = (0, _classnames["default"])((_classNames = {}, _defineProperty(_classNames, "".concat(baseClassName, "-root"), true), _defineProperty(_classNames, className, !!className), _defineProperty(_classNames, "is-open", this.state.isOpen), _classNames));
+                var controlClass = (0, _classnames["default"])((_classNames2 = {}, _defineProperty(_classNames2, "".concat(baseClassName, "-control"), true), _defineProperty(_classNames2, controlClassName, !!controlClassName), _defineProperty(_classNames2, disabledClass, !!disabledClass), _classNames2));
+                var placeholderClass = (0, _classnames["default"])((_classNames3 = {}, _defineProperty(_classNames3, "".concat(baseClassName, "-placeholder"), true), _defineProperty(_classNames3, placeholderClassName, !!placeholderClassName), _defineProperty(_classNames3, "is-selected", this.isValueSelected()), _classNames3));
+                var menuClass = (0, _classnames["default"])((_classNames4 = {}, _defineProperty(_classNames4, "".concat(baseClassName, "-menu"), true), _defineProperty(_classNames4, menuClassName, !!menuClassName), _classNames4));
+                var arrowClass = (0, _classnames["default"])((_classNames5 = {}, _defineProperty(_classNames5, "".concat(baseClassName, "-arrow"), true), _defineProperty(_classNames5, arrowClassName, !!arrowClassName), _classNames5));
+                var value = _react["default"].createElement("div", {
+                    className: placeholderClass
+                }, placeHolderValue);
+                var menu = this.state.isOpen ? _react["default"].createElement("div", {
+                    className: menuClass,
+                    "aria-expanded": "true"
+                }, this.buildMenu()) : null;
+                return _react["default"].createElement("div", {
+                    ref: this.dropdownRef,
+                    className: dropdownClass
+                }, _react["default"].createElement("div", {
+                    className: controlClass,
+                    onMouseDown: this.handleMouseDown.bind(this),
+                    onTouchEnd: this.handleMouseDown.bind(this),
+                    "aria-haspopup": "listbox"
+                }, value, _react["default"].createElement("div", {
+                    className: "".concat(baseClassName, "-arrow-wrapper")
+                }, arrowOpen && arrowClosed ? this.state.isOpen ? arrowOpen : arrowClosed : _react["default"].createElement("span", {
+                    className: arrowClass
+                }))), menu);
+            }
+        }
+    ]);
+    return Dropdown;
+}(_react.Component);
+Dropdown.defaultProps = {
+    baseClassName: "Dropdown"
+};
+var _default = Dropdown;
+exports["default"] = _default;
+
+},{"65bde529cb301e22":"21dqq","70e5c9bfe23b017b":"jocGM"}],"jocGM":[function(require,module,exports) {
+/*!
+	Copyright (c) 2018 Jed Watson.
+	Licensed under the MIT License (MIT), see
+	http://jedwatson.github.io/classnames
+*/ /* global define */ (function() {
+    "use strict";
+    var hasOwn = {}.hasOwnProperty;
+    function classNames() {
+        var classes = "";
+        for(var i = 0; i < arguments.length; i++){
+            var arg = arguments[i];
+            if (arg) classes = appendClass(classes, parseValue(arg));
+        }
+        return classes;
+    }
+    function parseValue(arg) {
+        if (typeof arg === "string" || typeof arg === "number") return arg;
+        if (typeof arg !== "object") return "";
+        if (Array.isArray(arg)) return classNames.apply(null, arg);
+        if (arg.toString !== Object.prototype.toString && !arg.toString.toString().includes("[native code]")) return arg.toString();
+        var classes = "";
+        for(var key in arg)if (hasOwn.call(arg, key) && arg[key]) classes = appendClass(classes, key);
+        return classes;
+    }
+    function appendClass(value, newClass) {
+        if (!newClass) return value;
+        if (value) return value + " " + newClass;
+        return value + newClass;
+    }
+    if (0, module.exports) {
+        classNames.default = classNames;
+        module.exports = classNames;
+    } else if (typeof define === "function" && typeof define.amd === "object" && define.amd) // register as 'classnames', consistent with npm package name
+    define("classnames", [], function() {
+        return classNames;
+    });
+    else window.classNames = classNames;
+})();
+
+},{}],"6E1S7":[function() {},{}],"2Em77":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$91d1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28188,1247 +28701,248 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _formWrapper = require("./FormWrapper");
 var _formWrapperDefault = parcelHelpers.interopDefault(_formWrapper);
+var _reactDropdown = require("react-dropdown");
+var _reactDropdownDefault = parcelHelpers.interopDefault(_reactDropdown);
 var _s = $RefreshSig$();
-function EventFrom({ event, updateFields, prices, setPrices }) {
+function EventFrom({ vertical1, vertical2, vertical3, vertical4, vertical5, vertical6, vertical7, vertical8, updateFields, prices, setPrices }) {
     _s();
-    const [selectedEvents, setSelectedEvents] = (0, _react.useState)(event);
-    const handleEventSelection = (selectedEvent)=>{
-        if (selectedEvents.includes(selectedEvent)) {
-            const temp = selectedEvents.filter((event)=>event !== selectedEvent);
-            setSelectedEvents(temp);
-            setPrices(100 * (temp.length - 1));
-            console.log(temp);
-        } else {
-            const temp = [
-                ...selectedEvents,
-                selectedEvent
-            ];
-            setSelectedEvents(temp);
-            setPrices(100 * (temp.length - 1));
-            console.log(temp);
+    const [v1, setv1] = (0, _react.useState)([
+        {
+            eventName: "Theme Based Model Demo (Srijan)",
+            members: null
+        },
+        {
+            eventName: "Best out of Waste (Nav Shrijan)",
+            members: null
+        },
+        {
+            eventName: "Code Debugging",
+            members: null
+        },
+        {
+            eventName: "LAN Gaming",
+            members: null
+        },
+        {
+            eventName: "BioGenius",
+            members: null
+        },
+        {
+            eventName: "Vista Vibes- Video Blog",
+            members: null
+        },
+        {
+            eventName: "Technical Memes",
+            members: null
+        },
+        {
+            eventName: "Build a Circuit",
+            members: null
+        },
+        {
+            eventName: "Workshop on 3D Printing",
+            members: null
+        },
+        {
+            eventName: "Workshop on Laser Cutting and Design",
+            members: null
+        },
+        {
+            eventName: "EV Quiz Challenge",
+            members: null
         }
-        updateFields({
-            event: selectedEvents
-        });
+    ]);
+    const [v2, setv2] = (0, _react.useState)([
+        {
+            eventName: "Pro Launch 2024",
+            members: null
+        },
+        {
+            eventName: "Ideattrakt",
+            members: null
+        },
+        {
+            eventName: "Poster Making",
+            members: null
+        },
+        {
+            eventName: "Finance Ki Pathshala",
+            members: null
+        }
+    ]);
+    const [v3, setv3] = (0, _react.useState)([
+        {
+            eventName: "Workshop on Somatotyping",
+            members: null
+        },
+        {
+            eventName: "WellTech Innovate Challenge",
+            members: null
+        },
+        {
+            eventName: "Best out of food waste challenge",
+            members: null
+        },
+        {
+            eventName: "YuvaFlex Fusion Challenge",
+            members: null
+        },
+        {
+            eventName: "Pseudo Recipe Competition",
+            members: null
+        },
+        {
+            eventName: "Rescue Rangers Workshop",
+            members: null
+        }
+    ]);
+    const [v4, setv4] = (0, _react.useState)([
+        {},
+        {},
+        {},
+        {}
+    ]);
+    const [v5, setv5] = (0, _react.useState)([
+        {},
+        {}
+    ]);
+    const [v6, setv6] = (0, _react.useState)([
+        {},
+        {},
+        {},
+        {}
+    ]);
+    const [v7, setv7] = (0, _react.useState)([
+        {},
+        {},
+        {},
+        {}
+    ]);
+    const [v8, setv8] = (0, _react.useState)([
+        {},
+        {},
+        {},
+        {}
+    ]);
+    // const handleCheckboxChange = (verticalIndex, eventIndex) => {
+    //     const updatedEvents = [...selectedEvents];
+    //     updatedEvents[verticalIndex][eventIndex].events = !updatedEvents[verticalIndex][eventIndex].events;
+    //     // If the event is unchecked, also reset the members value
+    //     if (!updatedEvents[verticalIndex][eventIndex].events) {
+    //         updatedEvents[verticalIndex][eventIndex].members = ""; // Or any other default value
+    //     }
+    //     setSelectedEvents(updatedEvents);
+    //     updateFields(updatedEvents); // Update updateFields with the new selectedEve
+    // }
+    const handleV1CheckboxChange = (index)=>{
+        //two things,
+        //handle member count (set to null if not null and set to 1 if null)
+        //and show the dropdown that is hidden
+        console.log(v1[index].eventName, v1[index].members);
+        if (v1[index].members === null) {
+            v1[index].members = 1;
+            document.getElementById("v1_0").style.display = "block";
+            console.log(document.getElementById("v1_0"));
+        } else {
+            v1[index].members = null;
+            document.getElementById("v1_0").style.display = "none";
+            console.log(document.getElementById("v1_0"));
+        }
     };
+    // const handleDropdownChange = (verticalIndex, eventIndex, value) => {
+    //     const updatedEvents = [...selectedEvents];
+    //     updatedEvents[verticalIndex][eventIndex].members = value;
+    //     setSelectedEvents(updatedEvents);
+    //     updateFields(updatedEvents); // Update updateFields with the new selectedEvents
+    // };
+    const options = [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+    ];
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formWrapperDefault.default), {
         title: "Events",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                className: "container-event",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "",
-                        children: "Innoskill Engineering Drift and Design"
-                    }, void 0, false, {
-                        fileName: "src/components/EventForm.js",
-                        lineNumber: 35,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "events",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+            className: "container-event",
+            children: [
+                "Vertical1",
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    className: "",
+                    children: "Innoskill Engineering Drift and Design"
+                }, void 0, false, {
+                    fileName: "src/components/EventForm.js",
+                    lineNumber: 98,
+                    columnNumber: 17
+                }, this),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "events",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "event-item",
                         children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Theme Based Model Demo (Srijan)"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 38,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "themeBasedModelDemo",
-                                        checked: selectedEvents.includes("themeBasedModelDemo"),
-                                        onChange: ()=>handleEventSelection("themeBasedModelDemo")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 39,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                children: "Theme Based Model Demo (Srijan)"
+                            }, void 0, false, {
                                 fileName: "src/components/EventForm.js",
-                                lineNumber: 37,
-                                columnNumber: 11
+                                lineNumber: 101,
+                                columnNumber: 25
                             }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Best out of Waste (Nav Shrijan)"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 43,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "bestOutOfWaste",
-                                        checked: selectedEvents.includes("bestOutOfWaste"),
-                                        onChange: ()=>handleEventSelection("bestOutOfWaste")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 44,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 42,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Code Debugging"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 48,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "codeDebugging",
-                                        checked: selectedEvents.includes("codeDebugging"),
-                                        onChange: ()=>handleEventSelection("codeDebugging")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 49,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 47,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "LAN Gaming"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 53,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "lanGaming",
-                                        checked: selectedEvents.includes("lanGaming"),
-                                        onChange: ()=>handleEventSelection("lanGaming")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 54,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 52,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "BioGenius"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 58,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "bioGenius",
-                                        checked: selectedEvents.includes("bioGenius"),
-                                        onChange: ()=>handleEventSelection("bioGenius")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 59,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 57,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Vista Vibes- Video Blog"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 63,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "vistaVibes",
-                                        checked: selectedEvents.includes("vistaVibes"),
-                                        onChange: ()=>handleEventSelection("vistaVibes")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 64,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 62,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Technical Memes"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 68,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "technicalMemes",
-                                        checked: selectedEvents.includes("technicalMemes"),
-                                        onChange: ()=>handleEventSelection("technicalMemes")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 69,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 67,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Build a Circuit"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 73,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "buildCircuit",
-                                        checked: selectedEvents.includes("buildCircuit"),
-                                        onChange: ()=>handleEventSelection("buildCircuit")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 74,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 72,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Workshop on 3D Printing"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 78,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "workshop3dPrinting",
-                                        checked: selectedEvents.includes("workshop3dPrinting"),
-                                        onChange: ()=>handleEventSelection("workshop3dPrinting")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 79,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 77,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Workshop on Laser Cutting and Design"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 83,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "workshopLaserCutting",
-                                        checked: selectedEvents.includes("workshopLaserCutting"),
-                                        onChange: ()=>handleEventSelection("workshopLaserCutting")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 84,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 82,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "EV Quiz Challenge"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 88,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "evQuizChallenge",
-                                        checked: selectedEvents.includes("evQuizChallenge"),
-                                        onChange: ()=>handleEventSelection("evQuizChallenge")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 89,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 87,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/EventForm.js",
-                        lineNumber: 36,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/EventForm.js",
-                lineNumber: 34,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                className: "container-event",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "",
-                        children: "Innoskill Business and Management Conundrum"
-                    }, void 0, false, {
-                        fileName: "src/components/EventForm.js",
-                        lineNumber: 95,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "events",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Pro Launch 2024"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 98,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "proLaunch2024",
-                                        checked: selectedEvents.includes("proLaunch2024"),
-                                        onChange: ()=>handleEventSelection("proLaunch2024")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 99,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 97,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Ideattrakt"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 103,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "ideattrakt",
-                                        checked: selectedEvents.includes("ideattrakt"),
-                                        onChange: ()=>handleEventSelection("ideattrakt")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 104,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                type: "checkbox",
+                                value: "themeBasedModelDemo",
+                                checked: v1[0].members !== null,
+                                onChange: ()=>handleV1CheckboxChange(0),
+                                className: ""
+                            }, void 0, false, {
                                 fileName: "src/components/EventForm.js",
                                 lineNumber: 102,
-                                columnNumber: 11
+                                columnNumber: 25
                             }, this),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
+                                id: "v1_0",
                                 children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Poster Making"
+                                    "hello",
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDropdownDefault.default), {
+                                        options: options,
+                                        value: "Select Team Members",
+                                        placeholder: "Select Team Members",
+                                        className: "mt-5"
                                     }, void 0, false, {
                                         fileName: "src/components/EventForm.js",
-                                        lineNumber: 108,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "posterMaking",
-                                        checked: selectedEvents.includes("posterMaking"),
-                                        onChange: ()=>handleEventSelection("posterMaking")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 109,
-                                        columnNumber: 13
+                                        lineNumber: 105,
+                                        columnNumber: 29
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "src/components/EventForm.js",
-                                lineNumber: 107,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Finance Ki Pathshala"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 113,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "financeKiPathshala",
-                                        checked: selectedEvents.includes("financeKiPathshala"),
-                                        onChange: ()=>handleEventSelection("financeKiPathshala")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 114,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 112,
-                                columnNumber: 11
+                                lineNumber: 103,
+                                columnNumber: 25
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/EventForm.js",
-                        lineNumber: 96,
-                        columnNumber: 9
+                        lineNumber: 100,
+                        columnNumber: 21
                     }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/EventForm.js",
-                lineNumber: 94,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                className: "container-event",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "",
-                        children: "Innoskill Healthcare Mystery"
-                    }, void 0, false, {
-                        fileName: "src/components/EventForm.js",
-                        lineNumber: 120,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "events",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Workshop on Somatotyping"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 123,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "workshopSomatotyping",
-                                        checked: selectedEvents.includes("workshopSomatotyping"),
-                                        onChange: ()=>handleEventSelection("workshopSomatotyping")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 124,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 122,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "WellTech Innovate Challenge"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 128,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "wellTechInnovateChallenge",
-                                        checked: selectedEvents.includes("wellTechInnovateChallenge"),
-                                        onChange: ()=>handleEventSelection("wellTechInnovateChallenge")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 129,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 127,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Best out of food waste challenge"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 133,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "bestOutOfFoodWaste",
-                                        checked: selectedEvents.includes("bestOutOfFoodWaste"),
-                                        onChange: ()=>handleEventSelection("bestOutOfFoodWaste")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 134,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 132,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "YuvaFlex Fusion Challenge"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 138,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "yuvaFlexFusionChallenge",
-                                        checked: selectedEvents.includes("yuvaFlexFusionChallenge"),
-                                        onChange: ()=>handleEventSelection("yuvaFlexFusionChallenge")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 139,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 137,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Pseudo Recipe Competition"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 143,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "pseudoRecipeCompetition",
-                                        checked: selectedEvents.includes("pseudoRecipeCompetition"),
-                                        onChange: ()=>handleEventSelection("pseudoRecipeCompetition")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 144,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 142,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Rescue Rangers Workshop"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 148,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "rescueRangersWorkshop",
-                                        checked: selectedEvents.includes("rescueRangersWorkshop"),
-                                        onChange: ()=>handleEventSelection("rescueRangersWorkshop")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 149,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 147,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/EventForm.js",
-                        lineNumber: 121,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/EventForm.js",
-                lineNumber: 119,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                className: "container-event",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "",
-                        children: "Innoskill Sustainathon"
-                    }, void 0, false, {
-                        fileName: "src/components/EventForm.js",
-                        lineNumber: 155,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "events",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Sustainathon"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 158,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "sustainathon",
-                                        checked: selectedEvents.includes("sustainathon"),
-                                        onChange: ()=>handleEventSelection("sustainathon")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 159,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 157,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Eco-reel"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 163,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "ecoReel",
-                                        checked: selectedEvents.includes("ecoReel"),
-                                        onChange: ()=>handleEventSelection("ecoReel")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 164,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 162,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "My community My Ad"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 168,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "myCommunityMyAd",
-                                        checked: selectedEvents.includes("myCommunityMyAd"),
-                                        onChange: ()=>handleEventSelection("myCommunityMyAd")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 169,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 167,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Know your C-footprint"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 173,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "knowYourCFootprint",
-                                        checked: selectedEvents.includes("knowYourCFootprint"),
-                                        onChange: ()=>handleEventSelection("knowYourCFootprint")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 174,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 172,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/EventForm.js",
-                        lineNumber: 156,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/EventForm.js",
-                lineNumber: 154,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                className: "container-event",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "",
-                        children: "Innoskill Culinary and Hospitality"
-                    }, void 0, false, {
-                        fileName: "src/components/EventForm.js",
-                        lineNumber: 180,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "events",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: 'Workshop on Coffee: Journey of coffee "Bean to cup" supported by Lavazza'
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 183,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "workshopCoffee",
-                                        checked: selectedEvents.includes("workshopCoffee"),
-                                        onChange: ()=>handleEventSelection("workshopCoffee")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 184,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 182,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Millet Cook off Challenge"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 188,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "milletCookOff",
-                                        checked: selectedEvents.includes("milletCookOff"),
-                                        onChange: ()=>handleEventSelection("milletCookOff")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 189,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 187,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/EventForm.js",
-                        lineNumber: 181,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/EventForm.js",
-                lineNumber: 179,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                className: "container-event",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "",
-                        children: "Innoskill Law Knot"
-                    }, void 0, false, {
-                        fileName: "src/components/EventForm.js",
-                        lineNumber: 195,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "events",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Parliamentary Debate"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 198,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "parliamentaryDebate",
-                                        checked: selectedEvents.includes("parliamentaryDebate"),
-                                        onChange: ()=>handleEventSelection("parliamentaryDebate")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 199,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 197,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Manifesto"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 203,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "manifesto",
-                                        checked: selectedEvents.includes("manifesto"),
-                                        onChange: ()=>handleEventSelection("manifesto")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 204,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 202,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Policy & Preamble Quiz"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 208,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "policyPreambleQuiz",
-                                        checked: selectedEvents.includes("policyPreambleQuiz"),
-                                        onChange: ()=>handleEventSelection("policyPreambleQuiz")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 209,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 207,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Reformative Policy Drafting"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 213,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "reformativePolicyDrafting",
-                                        checked: selectedEvents.includes("reformativePolicyDrafting"),
-                                        onChange: ()=>handleEventSelection("reformativePolicyDrafting")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 214,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 212,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/EventForm.js",
-                        lineNumber: 196,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/EventForm.js",
-                lineNumber: 194,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                className: "container-event",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "",
-                        children: "Innoskill Media and Literary Stumper"
-                    }, void 0, false, {
-                        fileName: "src/components/EventForm.js",
-                        lineNumber: 220,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "events",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: 'Techno- Vogue "Technology Fashion Walk"'
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 223,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "technoVogue",
-                                        checked: selectedEvents.includes("technoVogue"),
-                                        onChange: ()=>handleEventSelection("technoVogue")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 224,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 222,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: 'Spell Bee Competition "Who will be the Spell Bee Champion"'
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 228,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "spellBeeCompetition",
-                                        checked: selectedEvents.includes("spellBeeCompetition"),
-                                        onChange: ()=>handleEventSelection("spellBeeCompetition")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 229,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 227,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: 'Innovoice "RJ Hunt"'
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 233,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "innovoice",
-                                        checked: selectedEvents.includes("innovoice"),
-                                        onChange: ()=>handleEventSelection("innovoice")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 234,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 232,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: 'SnapFlickShowdown: "Reel Making Competition"'
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 238,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "snapFlickShowdown",
-                                        checked: selectedEvents.includes("snapFlickShowdown"),
-                                        onChange: ()=>handleEventSelection("snapFlickShowdown")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 239,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 237,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/EventForm.js",
-                        lineNumber: 221,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/EventForm.js",
-                lineNumber: 219,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                className: "container-event",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        className: "",
-                        children: "Innoskill Social Spectrum"
-                    }, void 0, false, {
-                        fileName: "src/components/EventForm.js",
-                        lineNumber: 245,
-                        columnNumber: 9
-                    }, this),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "events",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: "Shark tank 2.O (AWAKE THE ENTERPRENEUR WITHIN YOU)"
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 248,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "sharkTank2",
-                                        checked: selectedEvents.includes("sharkTank2"),
-                                        onChange: ()=>handleEventSelection("sharkTank2")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 249,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 247,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: 'PRAJAKIYA \u2013 The Rules of People "Global Warming and Environment Conservation"'
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 253,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "prajakiya",
-                                        checked: selectedEvents.includes("prajakiya"),
-                                        onChange: ()=>handleEventSelection("prajakiya")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 254,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 252,
-                                columnNumber: 11
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                className: "event-item",
-                                children: [
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                        children: 'Move To The Groove "Exploring the inner self through creative movement"'
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 258,
-                                        columnNumber: 13
-                                    }, this),
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                        type: "checkbox",
-                                        value: "moveToTheGroove",
-                                        checked: selectedEvents.includes("moveToTheGroove"),
-                                        onChange: ()=>handleEventSelection("moveToTheGroove")
-                                    }, void 0, false, {
-                                        fileName: "src/components/EventForm.js",
-                                        lineNumber: 259,
-                                        columnNumber: 13
-                                    }, this)
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 257,
-                                columnNumber: 11
-                            }, this)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/EventForm.js",
-                        lineNumber: 246,
-                        columnNumber: 9
-                    }, this)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/EventForm.js",
-                lineNumber: 244,
-                columnNumber: 7
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "fixed bottom-10 right-10 border p-5 font-bold text-2xl",
-                children: [
-                    "Price: ",
-                    prices
-                ]
-            }, void 0, true, {
-                fileName: "src/components/EventForm.js",
-                lineNumber: 263,
-                columnNumber: 7
-            }, this)
-        ]
-    }, void 0, true, {
+                }, void 0, false, {
+                    fileName: "src/components/EventForm.js",
+                    lineNumber: 99,
+                    columnNumber: 17
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/EventForm.js",
+            lineNumber: 97,
+            columnNumber: 13
+        }, this)
+    }, void 0, false, {
         fileName: "src/components/EventForm.js",
-        lineNumber: 33,
-        columnNumber: 5
+        lineNumber: 96,
+        columnNumber: 9
     }, this);
 }
-_s(EventFrom, "HvoFFMQAP9Og5US/+JqL5V3p5PA=");
+_s(EventFrom, "61KqhO9MuUmlJq0HSmgduzi/wlg=");
 _c = EventFrom;
 var _c;
 $RefreshReg$(_c, "EventFrom");
@@ -29438,458 +28952,7 @@ $RefreshReg$(_c, "EventFrom");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./FormWrapper":"iKWEe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2ukha":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$66ee = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$66ee.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "TeamForm", ()=>TeamForm);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _formWrapper = require("./FormWrapper");
-var _formWrapperDefault = parcelHelpers.interopDefault(_formWrapper);
-function TeamForm({ teamName, members, firstNameMem2, lastNameMem2, ageMem2, phoneMem2, semesterMem2, uniNameMem2, firstNameMem3, lastNameMem3, ageMem3, phoneMem3, semesterMem3, uniNameMem3, firstNameMem4, lastNameMem4, ageMem4, phoneMem4, semesterMem4, uniNameMem4, updateFields }) {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formWrapperDefault.default), {
-        title: "Enter Team's Details",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "flex flex-col",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "Team Name"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 30,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    autoFocus: true,
-                    required: true,
-                    type: "text",
-                    value: teamName,
-                    onChange: (e)=>updateFields({
-                            teamName: e.target.value
-                        }),
-                    className: "userFormInput"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 31,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "No. of Members"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 33,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    required: true,
-                    min: 1,
-                    type: "number",
-                    value: members,
-                    onChange: (e)=>updateFields({
-                            members: e.target.value
-                        }),
-                    className: "userFormInput"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 34,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "Member 2 details"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 36,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "First Name"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 37,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "text",
-                    value: firstNameMem2,
-                    onChange: (e)=>updateFields({
-                            firstNameMem2: e.target.value
-                        }),
-                    className: "userFormInput"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 38,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "Last Name"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 40,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "text",
-                    value: lastNameMem2,
-                    onChange: (e)=>updateFields({
-                            lastNameMem2: e.target.value
-                        }),
-                    className: "userFormInput"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 41,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "Age"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 43,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    min: 1,
-                    type: "number",
-                    value: ageMem2,
-                    onChange: (e)=>updateFields({
-                            ageMem2: e.target.value
-                        }),
-                    className: "userFormInput"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 44,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "Contact Number"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 46,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    min: 1,
-                    type: "number",
-                    value: phoneMem2,
-                    onChange: (e)=>updateFields({
-                            phoneMem2: e.target.value
-                        }),
-                    className: "userFormInput"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 47,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "Class/Semester"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 49,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "text",
-                    value: semesterMem2,
-                    onChange: (e)=>updateFields({
-                            semesterMem2: e.target.value
-                        }),
-                    className: "userFormInput"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 50,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "University/School Roll Number"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 52,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "text",
-                    value: uniNameMem2,
-                    onChange: (e)=>updateFields({
-                            uniNameMem2: e.target.value
-                        }),
-                    className: "userFormInput"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 53,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "Member 3 details"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 55,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "First Name"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 56,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "text",
-                    value: firstNameMem3,
-                    onChange: (e)=>updateFields({
-                            firstNameMem3: e.target.value
-                        }),
-                    className: "userFormInput"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 57,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "Last Name"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 59,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "text",
-                    value: lastNameMem3,
-                    onChange: (e)=>updateFields({
-                            lastNameMem3: e.target.value
-                        }),
-                    className: "userFormInput"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 60,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "Age"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 62,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    min: 1,
-                    type: "number",
-                    value: ageMem3,
-                    onChange: (e)=>updateFields({
-                            ageMem3: e.target.value
-                        }),
-                    className: "userFormInput"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 63,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "Contact Number"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 65,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    min: 1,
-                    type: "number",
-                    value: phoneMem3,
-                    onChange: (e)=>updateFields({
-                            phoneMem3: e.target.value
-                        }),
-                    className: "userFormInput"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 66,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "Class/Semester"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 68,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "text",
-                    value: semesterMem3,
-                    onChange: (e)=>updateFields({
-                            semesterMem3: e.target.value
-                        }),
-                    className: "userFormInput"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 69,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "University/School Roll Number"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 71,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "text",
-                    value: uniNameMem3,
-                    onChange: (e)=>updateFields({
-                            uniNameMem3: e.target.value
-                        }),
-                    className: "userFormInput"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 72,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "Member 4 details"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 74,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "First Name"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 75,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "text",
-                    value: firstNameMem4,
-                    onChange: (e)=>updateFields({
-                            firstNameMem4: e.target.value
-                        }),
-                    className: "userFormInput"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 76,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "Last Name"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 78,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "text",
-                    value: lastNameMem4,
-                    onChange: (e)=>updateFields({
-                            lastNameMem4: e.target.value
-                        }),
-                    className: "userFormInput"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 79,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "Age"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 81,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    min: 1,
-                    type: "number",
-                    value: ageMem4,
-                    onChange: (e)=>updateFields({
-                            ageMem4: e.target.value
-                        }),
-                    className: "userFormInput"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 82,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "Contact Number"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 84,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    min: 1,
-                    type: "number",
-                    value: phoneMem4,
-                    onChange: (e)=>updateFields({
-                            phoneMem4: e.target.value
-                        }),
-                    className: "userFormInput"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 85,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "Class/Semester"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 87,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "text",
-                    value: semesterMem4,
-                    onChange: (e)=>updateFields({
-                            semesterMem4: e.target.value
-                        }),
-                    className: "userFormInput"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 88,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    children: "University/School Roll Number"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 90,
-                    columnNumber: 7
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                    type: "text",
-                    value: uniNameMem4,
-                    onChange: (e)=>updateFields({
-                            uniNameMem4: e.target.value
-                        }),
-                    className: "userFormInput"
-                }, void 0, false, {
-                    fileName: "src/components/TeamForm.js",
-                    lineNumber: 91,
-                    columnNumber: 7
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/TeamForm.js",
-            lineNumber: 28,
-            columnNumber: 7
-        }, this)
-    }, void 0, false, {
-        fileName: "src/components/TeamForm.js",
-        lineNumber: 27,
-        columnNumber: 5
-    }, this);
-}
-_c = TeamForm;
-var _c;
-$RefreshReg$(_c, "TeamForm");
-
-  $parcel$ReactRefreshHelpers$66ee.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","./FormWrapper":"iKWEe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8EXQV":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./FormWrapper":"iKWEe","react-dropdown":"gbCO1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8EXQV":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$3486 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -29902,6 +28965,8 @@ parcelHelpers.export(exports, "PaymentForm", ()=>PaymentForm);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _formWrapper = require("./FormWrapper");
 var _formWrapperDefault = parcelHelpers.interopDefault(_formWrapper);
+var _upiPng = require("../assets/UPI.png");
+var _upiPngDefault = parcelHelpers.interopDefault(_upiPng);
 function PaymentForm({ prices }) {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formWrapperDefault.default), {
         title: "Pay your registration fee here",
@@ -29910,49 +28975,65 @@ function PaymentForm({ prices }) {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/components/PaymentForm.js",
-                        lineNumber: 6,
+                        lineNumber: 7,
                         columnNumber: 17
                     }, this),
                     "Bank Name: IndusInd Bank",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/components/PaymentForm.js",
-                        lineNumber: 7,
+                        lineNumber: 8,
                         columnNumber: 41
                     }, this),
                     "Account Name:  MANAV RACHNA INTERNATIONAL INSTITUTE OF RESEARCH AND STUDIES GST",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/components/PaymentForm.js",
-                        lineNumber: 8,
+                        lineNumber: 9,
                         columnNumber: 96
                     }, this),
                     "Account No:  201004119068",
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                         fileName: "src/components/PaymentForm.js",
-                        lineNumber: 9,
+                        lineNumber: 10,
                         columnNumber: 42
                     }, this),
                     "IFSC Code:  INDB0000702"
                 ]
             }, void 0, true, {
                 fileName: "src/components/PaymentForm.js",
-                lineNumber: 6,
+                lineNumber: 7,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "fixed bottom-10 right-10 border p-5 font-bold text-2xl",
+                className: "fixed bottom-10 right-10 border p-5 font-bold text-2xl bg-gray-800 rounded-lg text-white",
                 children: [
-                    "Price: ",
+                    "Price:\u20B9 ",
                     prices
                 ]
             }, void 0, true, {
                 fileName: "src/components/PaymentForm.js",
-                lineNumber: 11,
+                lineNumber: 12,
+                columnNumber: 17
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex flex-col justify-center items-center",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    src: (0, _upiPngDefault.default),
+                    alt: "UPI QR CODE",
+                    width: 500
+                }, void 0, false, {
+                    fileName: "src/components/PaymentForm.js",
+                    lineNumber: 16,
+                    columnNumber: 13
+                }, this)
+            }, void 0, false, {
+                fileName: "src/components/PaymentForm.js",
+                lineNumber: 15,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/components/PaymentForm.js",
-        lineNumber: 5,
+        lineNumber: 6,
         columnNumber: 9
     }, this);
 }
@@ -29965,7 +29046,48 @@ $RefreshReg$(_c, "PaymentForm");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","./FormWrapper":"iKWEe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["3DOi7","1xC6H","cc6EV"], "cc6EV", "parcelRequire8396")
+},{"react/jsx-dev-runtime":"iTorj","./FormWrapper":"iKWEe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../assets/UPI.png":"9uc5E"}],"9uc5E":[function(require,module,exports) {
+module.exports = require("5134f7bc2c87864c").getBundleURL("idBYo") + "UPI.2ee4a0af.png" + "?" + Date.now();
+
+},{"5134f7bc2c87864c":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+"use strict";
+var bundleURL = {};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ("" + err.stack).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return "/";
+}
+function getBaseURL(url) {
+    return ("" + url).replace(/^((?:https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/.+)\/[^/]+$/, "$1") + "/";
+}
+// TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ("" + url).match(/(https?|file|ftp|(chrome|moz|safari-web)-extension):\/\/[^/]+/);
+    if (!matches) throw new Error("Origin not found");
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}],"9JDXQ":[function(require,module,exports) {
+module.exports = require("299636e96082da63").getBundleURL("idBYo") + "mrlogo.5836a80a.png" + "?" + Date.now();
+
+},{"299636e96082da63":"lgJ39"}]},["3DOi7","1xC6H","cc6EV"], "cc6EV", "parcelRequire8396")
 
 </script>
 </body>

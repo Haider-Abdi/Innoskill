@@ -2,8 +2,10 @@ import React, { useState } from "react"
 import { useMultiForm } from "./hooks/useMultiForm";
 import { UserForm } from "./components/UserForm";
 import { EventFrom } from "./components/EventForm";
-import { TeamForm } from "./components/TeamForm";
+// import { TeamForm } from "./components/TeamForm";
 import { PaymentForm } from "./components/PaymentForm";
+import mrlogo from "./assets/mrlogo.png";
+// import background from "./assets/background.jpg";
 
 
 const initalData = {
@@ -12,30 +14,19 @@ const initalData = {
     email: "",
     age: 0,
     phone: 0,
+    option: "",
     uniName: "",
     semester: "",
     rollNo: "",
     teamName: "",
-    members: 0,
-    firstNameMem2: "",
-    lastNameMem2: "",
-    ageMem2: 0,
-    phoneMem2: 0,
-    semesterMem2: "",
-    uniNameMem2: "",
-    firstNameMem3: "",
-    lastNameMem3: "",
-    ageMem3: 0,
-    phoneMem3: 0,
-    semesterMem3: "",
-    uniNameMem3: "",
-    firstNameMem4: "",
-    lastNameMem4: "",
-    ageMem4: 0,
-    phoneMem4: 0,
-    semesterMem4: "",
-    uniNameMem4: "",
-    event: [""]
+    vertical1: [],
+    vertical2: [],
+    vertical3: [],
+    vertical4: [],
+    vertical5: [],
+    vertical6: [],
+    vertical7: [],
+    vertical8: [],
 }
 
 const App = () => {
@@ -50,24 +41,26 @@ const App = () => {
     }
 
     const { steps, currentStepIndex, step, FirstStep, back, next, LastStep } = useMultiForm([
-        <div>Start</div>,
+        <div className="font-bold text-2xl">Register Here</div>,
         <UserForm {...data} updateFields={updateFields} />,
-        <TeamForm {...data} updateFields={updateFields} />,
+        // <TeamForm {...data} updateFields={updateFields} />,
         <EventFrom {...data} updateFields={updateFields} prices={prices} setPrices={setPrices} />,
         <PaymentForm prices={prices} />,
     ])
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(!LastStep) return next();
+        if (!LastStep) return next();
         console.log(data);
     }
 
     return (
         <>
             <div className="flex flex-col justify-center items-center">
-                {/* <img src={logo} alt="logo" width={400} /> */}
-                <h1 className="font-bold text-4xl">InnoSkill 2024</h1>
+                <img src={mrlogo} alt="MRIIRS Logo" width={500} />
+                <h1 className ="font-bold text-4xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white">7th Edition</h1>
+                <h1 className="font-bold text-6xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] outline-8 text-white">InnoSkill 2024</h1>
+                <h1 className="font-bold text-4xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white">3rd-4th April,2024</h1>
             </div>
             <div className="p-10">
                 <form className="p-10 shadow-lg flex flex-col items-center bg-slate-100" onSubmit={handleSubmit}>
@@ -83,6 +76,7 @@ const App = () => {
                     </div>
                 </form>
             </div>
+
         </>
     )
 }
