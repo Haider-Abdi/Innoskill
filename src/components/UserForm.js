@@ -39,16 +39,11 @@ export function UserForm({
                 <input required min={1} type="number" className="userFormInput" value={phone} onChange={e => updateFields({ phone: e.target.value })} />
 
 
-                <label className="bg-white p-2 my-5">
-                    <Dropdown
-                        options={options}
-                        onChange={(selectedOption) => {
-                            updateFields({ option: selectedOption.value });
-                            console.log(selectedOption.value);
-                        }}
-                        value={option}
-                        placeholder="Select an option"
-                        className="" />
+                <label className="bg-white my-5">
+                    <select value={option} onChange={(e) => updateFields({ option: e.target.value })}>
+                        <option value={"School"}>School</option>
+                        <option value={"University"}>University</option>
+                    </select>
                 </label>
 
                 <label>University/School Name</label>

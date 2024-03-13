@@ -265,20 +265,8 @@ img, video {
   margin-bottom: 1.25rem;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
-.block {
-  display: block;
-}
-
 .flex {
   display: flex;
-}
-
-.hidden {
-  display: none;
 }
 
 .flex-col {
@@ -297,18 +285,17 @@ img, video {
   border-radius: .5rem;
 }
 
+.rounded-xl {
+  border-radius: .75rem;
+}
+
 .border {
   border-width: 1px;
 }
 
-.bg-slate-100 {
+.bg-gray-300 {
   --tw-bg-opacity: 1;
-  background-color: rgb(241 245 249 / var(--tw-bg-opacity));
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
 }
 
 .bg-gray-800 {
@@ -316,12 +303,13 @@ img, video {
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
-.p-10 {
-  padding: 2.5rem;
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.p-2 {
-  padding: .5rem;
+.p-10 {
+  padding: 2.5rem;
 }
 
 .p-5 {
@@ -350,12 +338,6 @@ img, video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.shadow-lg {
-  --tw-shadow: 0 10px 15px -3px #0000001a, 0 4px 6px -4px #0000001a;
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .outline-8 {
@@ -396,11 +378,15 @@ body:before {
 }
 
 .container-event {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  border-radius: .75rem;
   flex-direction: column;
   align-items: center;
   gap: 3rem;
   margin-top: .75rem;
   margin-bottom: .75rem;
+  padding: .5rem;
   display: flex;
 }
 
@@ -27609,21 +27595,185 @@ const initalData = {
     firstName: "",
     lastName: "",
     email: "",
-    age: 0,
-    phone: 0,
+    age: "",
+    phone: "",
     option: "",
     uniName: "",
     semester: "",
     rollNo: "",
     teamName: "",
-    vertical1: [],
-    vertical2: [],
-    vertical3: [],
-    vertical4: [],
-    vertical5: [],
-    vertical6: [],
-    vertical7: [],
-    vertical8: []
+    vertical1: [
+        {
+            eventName: "Theme Based Model Demo (Srijan)",
+            members: null
+        },
+        {
+            eventName: "Best out of Waste (Nav Shrijan)",
+            members: null
+        },
+        {
+            eventName: "Code Debugging",
+            members: null
+        },
+        {
+            eventName: "LAN Gaming",
+            members: null
+        },
+        {
+            eventName: "BioGenius",
+            members: null
+        },
+        {
+            eventName: "Vista Vibes- Video Blog",
+            members: null
+        },
+        {
+            eventName: "Technical Memes",
+            members: null
+        },
+        {
+            eventName: "Build a Circuit",
+            members: null
+        },
+        {
+            eventName: "Workshop on 3D Printing",
+            members: null
+        },
+        {
+            eventName: "Workshop on Laser Cutting and Design",
+            members: null
+        },
+        {
+            eventName: "EV Quiz Challenge",
+            members: null
+        }
+    ],
+    vertical2: [
+        {
+            eventName: "Pro Launch 2024",
+            members: null
+        },
+        {
+            eventName: "Ideattrakt",
+            members: null
+        },
+        {
+            eventName: "Poster Making",
+            members: null
+        },
+        {
+            eventName: "Finance Ki Pathshala",
+            members: null
+        }
+    ],
+    vertical3: [
+        {
+            eventName: "Workshop on Somatotyping",
+            members: null
+        },
+        {
+            eventName: "WellTech Innovate Challenge",
+            members: null
+        },
+        {
+            eventName: "Best out of food waste challenge",
+            members: null
+        },
+        {
+            eventName: "YuvaFlex Fusion Challenge",
+            members: null
+        },
+        {
+            eventName: "Pseudo Recipe Competition",
+            members: null
+        },
+        {
+            eventName: "Rescue Rangers Workshop",
+            members: null
+        }
+    ],
+    vertical4: [
+        {
+            eventName: "Sustainathon",
+            members: null
+        },
+        {
+            eventName: "Eco-reel",
+            members: null
+        },
+        {
+            eventName: "My community My Ad",
+            members: null
+        },
+        {
+            eventName: "Know your C-footprint",
+            members: null
+        }
+    ],
+    vertical5: [
+        {
+            eventName: "Workshop on Coffee: Journey of coffee 'Bean to cup' supported by Lavazza",
+            members: null
+        },
+        {
+            eventName: "Millet Cook off Challenge",
+            members: null
+        }
+    ],
+    vertical6: [
+        {
+            eventName: "Parliamentary Debate",
+            members: null
+        },
+        {
+            eventName: "Manifesto",
+            members: null
+        },
+        {
+            eventName: "Policy & Preamble Quiz",
+            members: null
+        },
+        {
+            eventName: "Reformative Policy Drafting",
+            members: null
+        }
+    ],
+    vertical7: [
+        {
+            eventName: "Techno- Vogue 'Technology Fashion Walk'",
+            members: null
+        },
+        {
+            eventName: "Spell Bee Competition 'Who will be the Spell Bee Champion'",
+            members: null
+        },
+        {
+            eventName: "Innovoice 'RJ Hunt'",
+            members: null
+        },
+        {
+            eventName: "SnapFlickShowdown: 'Reel Making Competition'",
+            members: null
+        }
+    ],
+    vertical8: [
+        {
+            eventName: "Shark tank 2.O (AWAKE THE ENTERPRENEUR WITHIN YOU)",
+            members: null
+        },
+        {
+            eventName: "PRAJAKIYA - The Rules of People 'Global Warming and Environment Conservation'",
+            members: null
+        },
+        {
+            eventName: "Move To The Groove 'Exploring the inner self through creative movement'",
+            members: null
+        },
+        {
+            eventName: "Screen Masters",
+            members: null
+        }
+    ]
 };
 const App = ()=>{
     _s();
@@ -27638,20 +27788,13 @@ const App = ()=>{
         });
     };
     const { steps, currentStepIndex, step, FirstStep, back, next, LastStep } = (0, _useMultiForm.useMultiForm)([
-        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "font-bold text-2xl",
-            children: "Register Here"
-        }, void 0, false, {
-            fileName: "src/App.js",
-            lineNumber: 44,
-            columnNumber: 9
-        }, undefined),
+        // <div className="font-bold text-2xl">Register Here</div>,
         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _userForm.UserForm), {
             ...data,
             updateFields: updateFields
         }, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 45,
+            lineNumber: 91,
             columnNumber: 9
         }, undefined),
         // <TeamForm {...data} updateFields={updateFields} />,
@@ -27662,14 +27805,14 @@ const App = ()=>{
             setPrices: setPrices
         }, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 47,
+            lineNumber: 93,
             columnNumber: 9
         }, undefined),
         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _paymentForm.PaymentForm), {
             prices: prices
         }, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 48,
+            lineNumber: 94,
             columnNumber: 9
         }, undefined)
     ]);
@@ -27689,7 +27832,7 @@ const App = ()=>{
                         width: 500
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 60,
+                        lineNumber: 106,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -27697,7 +27840,7 @@ const App = ()=>{
                         children: "7th Edition"
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 61,
+                        lineNumber: 107,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -27705,7 +27848,7 @@ const App = ()=>{
                         children: "InnoSkill 2024"
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 62,
+                        lineNumber: 108,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -27713,19 +27856,19 @@ const App = ()=>{
                         children: "3rd-4th April,2024"
                     }, void 0, false, {
                         fileName: "src/App.js",
-                        lineNumber: 63,
+                        lineNumber: 109,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/App.js",
-                lineNumber: 59,
+                lineNumber: 105,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "p-10",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
-                    className: "p-10 shadow-lg flex flex-col items-center bg-slate-100",
+                    className: "p-10 flex flex-col items-center bg-gray-300 rounded-xl",
                     onSubmit: handleSubmit,
                     children: [
                         step,
@@ -27738,7 +27881,7 @@ const App = ()=>{
                                     children: "Back"
                                 }, void 0, false, {
                                     fileName: "src/App.js",
-                                    lineNumber: 72,
+                                    lineNumber: 118,
                                     columnNumber: 40
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27748,24 +27891,24 @@ const App = ()=>{
                                     children: LastStep ? "Finish" : "Next"
                                 }, void 0, false, {
                                     fileName: "src/App.js",
-                                    lineNumber: 73,
+                                    lineNumber: 119,
                                     columnNumber: 25
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/App.js",
-                            lineNumber: 71,
+                            lineNumber: 117,
                             columnNumber: 21
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/App.js",
-                    lineNumber: 66,
+                    lineNumber: 112,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 65,
+                lineNumber: 111,
                 columnNumber: 13
             }, undefined)
         ]
@@ -28132,19 +28275,31 @@ function UserForm({ firstName, lastName, email, age, phone, option, uniName, sem
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                    className: "bg-white p-2 my-5",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDropdownDefault.default), {
-                        options: options,
-                        onChange: (selectedOption)=>{
-                            updateFields({
-                                option: selectedOption.value
-                            });
-                            console.log(selectedOption.value);
-                        },
+                    className: "bg-white my-5",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
                         value: option,
-                        placeholder: "Select an option",
-                        className: ""
-                    }, void 0, false, {
+                        onChange: (e)=>updateFields({
+                                option: e.target.value
+                            }),
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                value: "School",
+                                children: "School"
+                            }, void 0, false, {
+                                fileName: "src/components/UserForm.js",
+                                lineNumber: 44,
+                                columnNumber: 25
+                            }, this),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                value: "University",
+                                children: "University"
+                            }, void 0, false, {
+                                fileName: "src/components/UserForm.js",
+                                lineNumber: 45,
+                                columnNumber: 25
+                            }, this)
+                        ]
+                    }, void 0, true, {
                         fileName: "src/components/UserForm.js",
                         lineNumber: 43,
                         columnNumber: 21
@@ -28158,7 +28313,7 @@ function UserForm({ firstName, lastName, email, age, phone, option, uniName, sem
                     children: "University/School Name"
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 54,
+                    lineNumber: 49,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -28171,14 +28326,14 @@ function UserForm({ firstName, lastName, email, age, phone, option, uniName, sem
                         })
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 55,
+                    lineNumber: 50,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                     children: "Class/Semester"
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 57,
+                    lineNumber: 52,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -28191,14 +28346,14 @@ function UserForm({ firstName, lastName, email, age, phone, option, uniName, sem
                         })
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 58,
+                    lineNumber: 53,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                     children: "University/School Roll Number"
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 60,
+                    lineNumber: 55,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -28211,14 +28366,14 @@ function UserForm({ firstName, lastName, email, age, phone, option, uniName, sem
                         })
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 61,
+                    lineNumber: 56,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
                     children: "Team Name"
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 63,
+                    lineNumber: 58,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -28232,7 +28387,7 @@ function UserForm({ firstName, lastName, email, age, phone, option, uniName, sem
                     className: "userFormInput"
                 }, void 0, false, {
                     fileName: "src/components/UserForm.js",
-                    lineNumber: 64,
+                    lineNumber: 59,
                     columnNumber: 17
                 }, this)
             ]
@@ -28277,7 +28432,14 @@ const FormWrapper = ({ title, children })=>{
                 lineNumber: 4,
                 columnNumber: 13
             }, undefined),
-            children
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "",
+                children: children
+            }, void 0, false, {
+                fileName: "src/components/FormWrapper.js",
+                lineNumber: 5,
+                columnNumber: 13
+            }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/FormWrapper.js",
@@ -28706,243 +28868,1094 @@ var _reactDropdownDefault = parcelHelpers.interopDefault(_reactDropdown);
 var _s = $RefreshSig$();
 function EventFrom({ vertical1, vertical2, vertical3, vertical4, vertical5, vertical6, vertical7, vertical8, updateFields, prices, setPrices }) {
     _s();
-    const [v1, setv1] = (0, _react.useState)([
-        {
-            eventName: "Theme Based Model Demo (Srijan)",
-            members: null
-        },
-        {
-            eventName: "Best out of Waste (Nav Shrijan)",
-            members: null
-        },
-        {
-            eventName: "Code Debugging",
-            members: null
-        },
-        {
-            eventName: "LAN Gaming",
-            members: null
-        },
-        {
-            eventName: "BioGenius",
-            members: null
-        },
-        {
-            eventName: "Vista Vibes- Video Blog",
-            members: null
-        },
-        {
-            eventName: "Technical Memes",
-            members: null
-        },
-        {
-            eventName: "Build a Circuit",
-            members: null
-        },
-        {
-            eventName: "Workshop on 3D Printing",
-            members: null
-        },
-        {
-            eventName: "Workshop on Laser Cutting and Design",
-            members: null
-        },
-        {
-            eventName: "EV Quiz Challenge",
-            members: null
-        }
-    ]);
-    const [v2, setv2] = (0, _react.useState)([
-        {
-            eventName: "Pro Launch 2024",
-            members: null
-        },
-        {
-            eventName: "Ideattrakt",
-            members: null
-        },
-        {
-            eventName: "Poster Making",
-            members: null
-        },
-        {
-            eventName: "Finance Ki Pathshala",
-            members: null
-        }
-    ]);
-    const [v3, setv3] = (0, _react.useState)([
-        {
-            eventName: "Workshop on Somatotyping",
-            members: null
-        },
-        {
-            eventName: "WellTech Innovate Challenge",
-            members: null
-        },
-        {
-            eventName: "Best out of food waste challenge",
-            members: null
-        },
-        {
-            eventName: "YuvaFlex Fusion Challenge",
-            members: null
-        },
-        {
-            eventName: "Pseudo Recipe Competition",
-            members: null
-        },
-        {
-            eventName: "Rescue Rangers Workshop",
-            members: null
-        }
-    ]);
-    const [v4, setv4] = (0, _react.useState)([
-        {},
-        {},
-        {},
-        {}
-    ]);
-    const [v5, setv5] = (0, _react.useState)([
-        {},
-        {}
-    ]);
-    const [v6, setv6] = (0, _react.useState)([
-        {},
-        {},
-        {},
-        {}
-    ]);
-    const [v7, setv7] = (0, _react.useState)([
-        {},
-        {},
-        {},
-        {}
-    ]);
-    const [v8, setv8] = (0, _react.useState)([
-        {},
-        {},
-        {},
-        {}
-    ]);
-    // const handleCheckboxChange = (verticalIndex, eventIndex) => {
-    //     const updatedEvents = [...selectedEvents];
-    //     updatedEvents[verticalIndex][eventIndex].events = !updatedEvents[verticalIndex][eventIndex].events;
-    //     // If the event is unchecked, also reset the members value
-    //     if (!updatedEvents[verticalIndex][eventIndex].events) {
-    //         updatedEvents[verticalIndex][eventIndex].members = ""; // Or any other default value
-    //     }
-    //     setSelectedEvents(updatedEvents);
-    //     updateFields(updatedEvents); // Update updateFields with the new selectedEve
-    // }
+    const [v1, setv1] = (0, _react.useState)(vertical1);
+    const [v2, setv2] = (0, _react.useState)(vertical2);
+    const [v3, setv3] = (0, _react.useState)(vertical3);
+    const [v4, setv4] = (0, _react.useState)(vertical4);
+    const [v5, setv5] = (0, _react.useState)(vertical5);
+    const [v6, setv6] = (0, _react.useState)(vertical6);
+    const [v7, setv7] = (0, _react.useState)(vertical7);
+    const [v8, setv8] = (0, _react.useState)(vertical8);
     const handleV1CheckboxChange = (index)=>{
-        //two things,
-        //handle member count (set to null if not null and set to 1 if null)
-        //and show the dropdown that is hidden
-        console.log(v1[index].eventName, v1[index].members);
-        if (v1[index].members === null) {
-            v1[index].members = 1;
-            document.getElementById("v1_0").style.display = "block";
-            console.log(document.getElementById("v1_0"));
-        } else {
-            v1[index].members = null;
-            document.getElementById("v1_0").style.display = "none";
-            console.log(document.getElementById("v1_0"));
-        }
+        // console.log(v1[index].eventName, v1[index].members)
+        console.log(v1[index].members);
+        const updatedData = [
+            ...v1
+        ];
+        if (updatedData[index].members === null) updatedData[index].members = 1;
+        else updatedData[index].members = null;
+        setv1(()=>updatedData);
+        updateFields({
+            vertical1: v1
+        });
     };
-    // const handleDropdownChange = (verticalIndex, eventIndex, value) => {
-    //     const updatedEvents = [...selectedEvents];
-    //     updatedEvents[verticalIndex][eventIndex].members = value;
-    //     setSelectedEvents(updatedEvents);
-    //     updateFields(updatedEvents); // Update updateFields with the new selectedEvents
-    // };
-    const options = [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5"
-    ];
+    const handleV2CheckboxChange = (index)=>{
+        // console.log(v1[index].eventName, v1[index].members)
+        console.log(v2[index].members);
+        const updatedData = [
+            ...v2
+        ];
+        if (updatedData[index].members === null) updatedData[index].members = 1;
+        else updatedData[index].members = null;
+        setv2(()=>updatedData);
+        updateFields({
+            vertical2: v2
+        });
+    };
+    const handleV3CheckboxChange = (index)=>{
+        // console.log(v1[index].eventName, v1[index].members)
+        console.log(v3[index].members);
+        const updatedData = [
+            ...v3
+        ];
+        if (updatedData[index].members === null) updatedData[index].members = 1;
+        else updatedData[index].members = null;
+        setv3(()=>updatedData);
+        updateFields({
+            vertical3: v3
+        });
+    };
+    const handleV4CheckboxChange = (index)=>{
+        // console.log(v1[index].eventName, v1[index].members)
+        console.log(v4[index].members);
+        const updatedData = [
+            ...v4
+        ];
+        if (updatedData[index].members === null) updatedData[index].members = 1;
+        else updatedData[index].members = null;
+        setv4(()=>updatedData);
+        updateFields({
+            vertical4: v4
+        });
+    };
+    const handleV5CheckboxChange = (index)=>{
+        // console.log(v1[index].eventName, v1[index].members)
+        console.log(v5[index].members);
+        const updatedData = [
+            ...v5
+        ];
+        if (updatedData[index].members === null) updatedData[index].members = 1;
+        else updatedData[index].members = null;
+        setv5(()=>updatedData);
+        updateFields({
+            vertical5: v5
+        });
+    };
+    const handleV6CheckboxChange = (index)=>{
+        // console.log(v1[index].eventName, v1[index].members)
+        console.log(v6[index].members);
+        const updatedData = [
+            ...v6
+        ];
+        if (updatedData[index].members === null) updatedData[index].members = 1;
+        else updatedData[index].members = null;
+        setv6(()=>updatedData);
+        updateFields({
+            vertical6: v6
+        });
+    };
+    const handleV7CheckboxChange = (index)=>{
+        // console.log(v1[index].eventName, v1[index].members)
+        console.log(v7[index].members);
+        const updatedData = [
+            ...v7
+        ];
+        if (updatedData[index].members === null) updatedData[index].members = 1;
+        else updatedData[index].members = null;
+        setv7(()=>updatedData);
+        updateFields({
+            v7: updatedData
+        });
+    };
+    const handleV8CheckboxChange = (index)=>{
+        // console.log(v1[index].eventName, v1[index].members)
+        console.log(v8[index].members);
+        const updatedData = [
+            ...v8
+        ];
+        if (updatedData[index].members === null) updatedData[index].members = 1;
+        else updatedData[index].members = null;
+        setv8(()=>updatedData);
+        updateFields({
+            vertical8: v8
+        });
+    };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _formWrapperDefault.default), {
         title: "Events",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-            className: "container-event",
-            children: [
-                "Vertical1",
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    className: "",
-                    children: "Innoskill Engineering Drift and Design"
-                }, void 0, false, {
-                    fileName: "src/components/EventForm.js",
-                    lineNumber: 98,
-                    columnNumber: 17
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "events",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "event-item",
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                                children: "Theme Based Model Demo (Srijan)"
-                            }, void 0, false, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 101,
-                                columnNumber: 25
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
-                                type: "checkbox",
-                                value: "themeBasedModelDemo",
-                                checked: v1[0].members !== null,
-                                onChange: ()=>handleV1CheckboxChange(0),
-                                className: ""
-                            }, void 0, false, {
-                                fileName: "src/components/EventForm.js",
-                                lineNumber: 102,
-                                columnNumber: 25
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                                id: "v1_0",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                className: "container-event",
+                children: [
+                    "Vertical1",
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "",
+                        children: "Innoskill Engineering Drift and Design"
+                    }, void 0, false, {
+                        fileName: "src/components/EventForm.js",
+                        lineNumber: 128,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "events",
+                        children: v1.map((data, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "event-item",
                                 children: [
-                                    "hello",
-                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDropdownDefault.default), {
-                                        options: options,
-                                        value: "Select Team Members",
-                                        placeholder: "Select Team Members",
-                                        className: "mt-5"
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                        children: data.eventName
                                     }, void 0, false, {
                                         fileName: "src/components/EventForm.js",
-                                        lineNumber: 105,
-                                        columnNumber: 29
+                                        lineNumber: 133,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "checkbox",
+                                        onChange: ()=>handleV1CheckboxChange(index)
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 134,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        children: data.members !== null && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                                            value: data.members,
+                                            onChange: (e)=>{
+                                                const updatedData = [
+                                                    ...v1
+                                                ];
+                                                updatedData[index].members = e.target.value;
+                                                setv1(()=>updatedData);
+                                            },
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 0,
+                                                    disabled: true,
+                                                    children: "Select Team Size"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 143,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 1,
+                                                    children: "1"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 144,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 2,
+                                                    children: "2"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 145,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 3,
+                                                    children: "3"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 146,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 4,
+                                                    children: "4"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 147,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 5,
+                                                    children: "5"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 148,
+                                                    columnNumber: 45
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/EventForm.js",
+                                            lineNumber: 138,
+                                            columnNumber: 41
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 135,
+                                        columnNumber: 33
                                     }, this)
                                 ]
-                            }, void 0, true, {
+                            }, data.eventName, true, {
                                 fileName: "src/components/EventForm.js",
-                                lineNumber: 103,
-                                columnNumber: 25
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                                lineNumber: 132,
+                                columnNumber: 29
+                            }, this))
+                    }, void 0, false, {
                         fileName: "src/components/EventForm.js",
-                        lineNumber: 100,
-                        columnNumber: 21
+                        lineNumber: 129,
+                        columnNumber: 17
                     }, this)
-                }, void 0, false, {
-                    fileName: "src/components/EventForm.js",
-                    lineNumber: 99,
-                    columnNumber: 17
-                }, this)
-            ]
-        }, void 0, true, {
-            fileName: "src/components/EventForm.js",
-            lineNumber: 97,
-            columnNumber: 13
-        }, this)
-    }, void 0, false, {
+                ]
+            }, void 0, true, {
+                fileName: "src/components/EventForm.js",
+                lineNumber: 127,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                className: "container-event",
+                children: [
+                    "Vertical2",
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "",
+                        children: "Innoskill Business and Management Conundrum"
+                    }, void 0, false, {
+                        fileName: "src/components/EventForm.js",
+                        lineNumber: 159,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "events",
+                        children: v2.map((data, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "event-item",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                        children: data.eventName
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 164,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "checkbox",
+                                        onChange: ()=>handleV2CheckboxChange(index)
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 165,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        children: data.members !== null && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                                            value: data.members,
+                                            onChange: (e)=>{
+                                                const updatedData = [
+                                                    ...v2
+                                                ];
+                                                updatedData[index].members = e.target.value;
+                                                setv2(()=>updatedData);
+                                            },
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 0,
+                                                    disabled: true,
+                                                    children: "Select Team Size"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 174,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 1,
+                                                    children: "1"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 175,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 2,
+                                                    children: "2"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 176,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 3,
+                                                    children: "3"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 177,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 4,
+                                                    children: "4"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 178,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 5,
+                                                    children: "5"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 179,
+                                                    columnNumber: 45
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/EventForm.js",
+                                            lineNumber: 169,
+                                            columnNumber: 41
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 166,
+                                        columnNumber: 33
+                                    }, this)
+                                ]
+                            }, data.eventName, true, {
+                                fileName: "src/components/EventForm.js",
+                                lineNumber: 163,
+                                columnNumber: 29
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "src/components/EventForm.js",
+                        lineNumber: 160,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/EventForm.js",
+                lineNumber: 158,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                className: "container-event",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "",
+                        children: "Innoskill Healthcare Mystery"
+                    }, void 0, false, {
+                        fileName: "src/components/EventForm.js",
+                        lineNumber: 190,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "events",
+                        children: v3.map((data, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "event-item",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                        children: data.eventName
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 195,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "checkbox",
+                                        onChange: ()=>handleV3CheckboxChange(index)
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 196,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        children: data.members !== null && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                                            value: data.members,
+                                            onChange: (e)=>{
+                                                const updatedData = [
+                                                    ...v3
+                                                ];
+                                                updatedData[index].members = e.target.value;
+                                                setv3(()=>updatedData);
+                                            },
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 0,
+                                                    disabled: true,
+                                                    children: "Select Team Size"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 205,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 1,
+                                                    children: "1"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 206,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 2,
+                                                    children: "2"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 207,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 3,
+                                                    children: "3"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 208,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 4,
+                                                    children: "4"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 209,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 5,
+                                                    children: "5"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 210,
+                                                    columnNumber: 45
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/EventForm.js",
+                                            lineNumber: 200,
+                                            columnNumber: 41
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 197,
+                                        columnNumber: 33
+                                    }, this)
+                                ]
+                            }, data.eventName, true, {
+                                fileName: "src/components/EventForm.js",
+                                lineNumber: 194,
+                                columnNumber: 29
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "src/components/EventForm.js",
+                        lineNumber: 191,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/EventForm.js",
+                lineNumber: 189,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                className: "container-event",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "",
+                        children: "Innoskill Sustainathon"
+                    }, void 0, false, {
+                        fileName: "src/components/EventForm.js",
+                        lineNumber: 221,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "events",
+                        children: v4.map((data, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "event-item",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                        children: data.eventName
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 226,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "checkbox",
+                                        onChange: ()=>handleV4CheckboxChange(index)
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 227,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        children: data.members !== null && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                                            value: data.members,
+                                            onChange: (e)=>{
+                                                const updatedData = [
+                                                    ...v4
+                                                ];
+                                                updatedData[index].members = e.target.value;
+                                                setv4(()=>updatedData);
+                                            },
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 0,
+                                                    disabled: true,
+                                                    children: "Select Team Size"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 236,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 1,
+                                                    children: "1"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 237,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 2,
+                                                    children: "2"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 238,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 3,
+                                                    children: "3"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 239,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 4,
+                                                    children: "4"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 240,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 5,
+                                                    children: "5"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 241,
+                                                    columnNumber: 45
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/EventForm.js",
+                                            lineNumber: 231,
+                                            columnNumber: 41
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 228,
+                                        columnNumber: 33
+                                    }, this)
+                                ]
+                            }, data.eventName, true, {
+                                fileName: "src/components/EventForm.js",
+                                lineNumber: 225,
+                                columnNumber: 29
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "src/components/EventForm.js",
+                        lineNumber: 222,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/EventForm.js",
+                lineNumber: 220,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                className: "container-event",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "",
+                        children: "Innoskill Culinary and Hospitality"
+                    }, void 0, false, {
+                        fileName: "src/components/EventForm.js",
+                        lineNumber: 252,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "events",
+                        children: v5.map((data, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "event-item",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                        children: data.eventName
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 257,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "checkbox",
+                                        onChange: ()=>handleV5CheckboxChange(index)
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 258,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        children: data.members !== null && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                                            value: data.members,
+                                            onChange: (e)=>{
+                                                const updatedData = [
+                                                    ...v5
+                                                ];
+                                                updatedData[index].members = e.target.value;
+                                                setv5(()=>updatedData);
+                                            },
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 0,
+                                                    disabled: true,
+                                                    children: "Select Team Size"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 267,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 1,
+                                                    children: "1"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 268,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 2,
+                                                    children: "2"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 269,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 3,
+                                                    children: "3"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 270,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 4,
+                                                    children: "4"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 271,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 5,
+                                                    children: "5"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 272,
+                                                    columnNumber: 45
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/EventForm.js",
+                                            lineNumber: 262,
+                                            columnNumber: 41
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 259,
+                                        columnNumber: 33
+                                    }, this)
+                                ]
+                            }, data.eventName, true, {
+                                fileName: "src/components/EventForm.js",
+                                lineNumber: 256,
+                                columnNumber: 29
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "src/components/EventForm.js",
+                        lineNumber: 253,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/EventForm.js",
+                lineNumber: 251,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                className: "container-event",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "",
+                        children: "Innoskill Law Knot"
+                    }, void 0, false, {
+                        fileName: "src/components/EventForm.js",
+                        lineNumber: 283,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "events",
+                        children: v6.map((data, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "event-item",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                        children: data.eventName
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 288,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "checkbox",
+                                        onChange: ()=>handleV6CheckboxChange(index)
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 289,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        children: data.members !== null && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                                            value: data.members,
+                                            onChange: (e)=>{
+                                                const updatedData = [
+                                                    ...v6
+                                                ];
+                                                updatedData[index].members = e.target.value;
+                                                setv6(()=>updatedData);
+                                            },
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 0,
+                                                    disabled: true,
+                                                    children: "Select Team Size"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 298,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 1,
+                                                    children: "1"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 299,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 2,
+                                                    children: "2"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 300,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 3,
+                                                    children: "3"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 301,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 4,
+                                                    children: "4"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 302,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 5,
+                                                    children: "5"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 303,
+                                                    columnNumber: 45
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/EventForm.js",
+                                            lineNumber: 293,
+                                            columnNumber: 41
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 290,
+                                        columnNumber: 33
+                                    }, this)
+                                ]
+                            }, data.eventName, true, {
+                                fileName: "src/components/EventForm.js",
+                                lineNumber: 287,
+                                columnNumber: 29
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "src/components/EventForm.js",
+                        lineNumber: 284,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/EventForm.js",
+                lineNumber: 282,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                className: "container-event",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "",
+                        children: "Innoskill Media and Literary Stumper"
+                    }, void 0, false, {
+                        fileName: "src/components/EventForm.js",
+                        lineNumber: 314,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "events",
+                        children: v7.map((data, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "event-item",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                        children: data.eventName
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 319,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "checkbox",
+                                        onChange: ()=>handleV7CheckboxChange(index)
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 320,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        children: data.members !== null && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                                            value: data.members,
+                                            onChange: (e)=>{
+                                                const updatedData = [
+                                                    ...v7
+                                                ];
+                                                updatedData[index].members = e.target.value;
+                                                setv7(()=>updatedData);
+                                            },
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 0,
+                                                    disabled: true,
+                                                    children: "Select Team Size"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 329,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 1,
+                                                    children: "1"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 330,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 2,
+                                                    children: "2"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 331,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 3,
+                                                    children: "3"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 332,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 4,
+                                                    children: "4"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 333,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 5,
+                                                    children: "5"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 334,
+                                                    columnNumber: 45
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/EventForm.js",
+                                            lineNumber: 324,
+                                            columnNumber: 41
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 321,
+                                        columnNumber: 33
+                                    }, this)
+                                ]
+                            }, data.eventName, true, {
+                                fileName: "src/components/EventForm.js",
+                                lineNumber: 318,
+                                columnNumber: 29
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "src/components/EventForm.js",
+                        lineNumber: 315,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/EventForm.js",
+                lineNumber: 313,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                className: "container-event",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                        className: "",
+                        children: "Innoskill Social Spectrum"
+                    }, void 0, false, {
+                        fileName: "src/components/EventForm.js",
+                        lineNumber: 345,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "events",
+                        children: v8.map((data, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "event-item",
+                                children: [
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                        children: data.eventName
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 350,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                        type: "checkbox",
+                                        onChange: ()=>handleV8CheckboxChange(index)
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 351,
+                                        columnNumber: 33
+                                    }, this),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                        children: data.members !== null && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("select", {
+                                            value: data.members,
+                                            onChange: (e)=>{
+                                                const updatedData = [
+                                                    ...v8
+                                                ];
+                                                updatedData[index].members = e.target.value;
+                                                setv8(()=>updatedData);
+                                            },
+                                            children: [
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 0,
+                                                    disabled: true,
+                                                    children: "Select Team Size"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 360,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 1,
+                                                    children: "1"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 361,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 2,
+                                                    children: "2"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 362,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 3,
+                                                    children: "3"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 363,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 4,
+                                                    children: "4"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 364,
+                                                    columnNumber: 45
+                                                }, this),
+                                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("option", {
+                                                    value: 5,
+                                                    children: "5"
+                                                }, void 0, false, {
+                                                    fileName: "src/components/EventForm.js",
+                                                    lineNumber: 365,
+                                                    columnNumber: 45
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "src/components/EventForm.js",
+                                            lineNumber: 355,
+                                            columnNumber: 41
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "src/components/EventForm.js",
+                                        lineNumber: 352,
+                                        columnNumber: 33
+                                    }, this)
+                                ]
+                            }, data.eventName, true, {
+                                fileName: "src/components/EventForm.js",
+                                lineNumber: 349,
+                                columnNumber: 29
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "src/components/EventForm.js",
+                        lineNumber: 346,
+                        columnNumber: 17
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/EventForm.js",
+                lineNumber: 344,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "fixed bottom-10 right-10 border p-5 font-bold text-2xl bg-gray-800 rounded-lg text-white",
+                children: [
+                    "Price:\u20B9 ",
+                    prices
+                ]
+            }, void 0, true, {
+                fileName: "src/components/EventForm.js",
+                lineNumber: 374,
+                columnNumber: 13
+            }, this)
+        ]
+    }, void 0, true, {
         fileName: "src/components/EventForm.js",
-        lineNumber: 96,
+        lineNumber: 126,
         columnNumber: 9
     }, this);
 }
-_s(EventFrom, "61KqhO9MuUmlJq0HSmgduzi/wlg=");
+_s(EventFrom, "ki1ke0jEz8SvWrc3ccqlmcLgZ70=");
 _c = EventFrom;
 var _c;
 $RefreshReg$(_c, "EventFrom");

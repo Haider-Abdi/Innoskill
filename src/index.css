@@ -23,7 +23,7 @@ body::before {
 }
 
 .container-event {
-    @apply flex flex-col gap-12 items-center my-3 
+    @apply flex flex-col gap-12 items-center my-3 bg-white p-2 rounded-xl
 }
 
 .container-event h1 {
