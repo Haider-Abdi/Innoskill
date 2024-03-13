@@ -90,10 +90,24 @@ function App() {
     <PaymentForm prices={prices} />,
   ])
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async(e: FormEvent) => {
     e.preventDefault();
     if (!LastStep) return next();
     console.log(data);
+    // const googleScriptsUrl = "https://script.google.com/macros/s/AKfycbwWz7eqgjSxUI0bSUHHmuCM7jE5YIf-zje3x0o4V_0MAuGrL_DfJnXSnTA1CLDLoS0GOA/exec"
+
+    // fetch (googleScriptsUrl, {
+    //   redirect: "follow",
+    //   method: "POST",
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //   },
+    //   body: JSON.stringify(data)
+    // }).then((response) => {
+    //   console.log(response);
+    // }).catch((error) => {
+    //   console.log(error);
+    // })
   }
 
   return (
@@ -103,10 +117,10 @@ function App() {
         <h1 className="font-bold text-4xl">InnoSkill 2024</h1>
       </div>
       <div className="p-10">
-        <form className="border-2 rounded-xl border-black p-10 flex flex-col items-center bg-slate-50" onSubmit={handleSubmit}>
-          <div>
+        <form className="p-10 shadow-lg flex flex-col items-center bg-slate-100" onSubmit={handleSubmit}>
+          {/* <div>
             {currentStepIndex + 1}/ {steps.length}
-          </div>
+          </div> */}
           {step}
           <div>
             {!FirstStep && <button type="button" className="navbutton" onClick={back}>Back</button>}
