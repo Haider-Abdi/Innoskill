@@ -7,6 +7,10 @@ import { EventForm } from "@/components/EventForm";
 import { PaymentForm } from "@/components/PaymentForm";
 import mrlogo from "@/assets/mrlogo.png";
 import Image from "next/image";
+import { Roboto_Slab } from "next/font/google"
+
+
+const roboto = Roboto_Slab({ subsets: ["latin"] });
 
 const initalData = {
   firstName: "",
@@ -115,20 +119,24 @@ export default function Home() {
     <main>
       <div className="flex flex-col justify-center items-center">
         <Image src={mrlogo} alt="MRIIRS Logo" width={500} />
-        <h1 className="font-bold text-4xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white">7th Edition</h1>
-        <h1 className="font-bold text-6xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] outline-8 text-white">InnoSkill 2024</h1>
-        <h1 className="font-bold text-4xl drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-white">3rd-4th April,2024</h1>
+        <div className="text-center my-5">
+          <h1 className="font-bold text-4xl text-gray-700">7th Edition</h1>
+          <span className={roboto.className}>
+            <h1 className="font-extrabold text-6xl bg-gradient-to-r from-red-700 to bg-yellow-500 bg-clip-text text-transparent outline-8 uppercase">InnoSkill 2024</h1>
+          </span>
+          <h1 className="font-bold text-4xl text-gray-700">3rd-4th April</h1>
+        </div>
       </div>
-      <div className="p-10">
-        <form className="p-10 flex flex-col items-center bg-gray-900 text-white rounded-xl" onSubmit={handleSubmit}>
+      <div className="p-10 flex justify-center">
+        <form className="p-10 flex flex-col items-center bg-gradient-to-tr from-blue-950 to-yellow-950 text-white  rounded-xl w-1/2" onSubmit={handleSubmit}>
           {/* <div>
               {currentStepIndex + 1}/ {steps.length}
             </div> */}
           {step}
-          <div className="fixed bottom-5 bg-gray-900 p-3 rounded-xl">
-            {!FirstStep && <button type="button" className="navbutton" onClick={back}>{`<`}</button>}
+          <div className="p-3 rounded-xl">
+            {!FirstStep && <button type="button" className="navbutton" onClick={back}>Back</button>}
             <button type="button" className="navbutton" onClick={handleSubmit}>
-              {LastStep ? "Submit" : ">"}
+              {LastStep ? "Submit" : "Next"}
             </button>
           </div>
         </form>

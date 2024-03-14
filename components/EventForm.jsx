@@ -36,7 +36,7 @@ export function EventForm({
             updatedData[index].members = null;
         }
         setv1(() => updatedData);
-        updateFields({vertical1: v1})
+        updateFields({ vertical1: v1 })
     }
     const handleV2CheckboxChange = (index) => {
         // console.log(v1[index].eventName, v1[index].members)
@@ -48,7 +48,7 @@ export function EventForm({
             updatedData[index].members = null;
         }
         setv2(() => updatedData);
-        updateFields({vertical2: v2})
+        updateFields({ vertical2: v2 })
     }
     const handleV3CheckboxChange = (index) => {
         // console.log(v1[index].eventName, v1[index].members)
@@ -60,7 +60,7 @@ export function EventForm({
             updatedData[index].members = null;
         }
         setv3(() => updatedData);
-        updateFields({vertical3: v3})
+        updateFields({ vertical3: v3 })
     }
     const handleV4CheckboxChange = (index) => {
         // console.log(v1[index].eventName, v1[index].members)
@@ -72,7 +72,7 @@ export function EventForm({
             updatedData[index].members = null;
         }
         setv4(() => updatedData);
-        updateFields({vertical4: v4})
+        updateFields({ vertical4: v4 })
     }
     const handleV5CheckboxChange = (index) => {
         // console.log(v1[index].eventName, v1[index].members)
@@ -84,7 +84,7 @@ export function EventForm({
             updatedData[index].members = null;
         }
         setv5(() => updatedData);
-        updateFields({vertical5: v5})
+        updateFields({ vertical5: v5 })
     }
     const handleV6CheckboxChange = (index) => {
         // console.log(v1[index].eventName, v1[index].members)
@@ -96,7 +96,7 @@ export function EventForm({
             updatedData[index].members = null;
         }
         setv6(() => updatedData);
-        updateFields({vertical6: v6})
+        updateFields({ vertical6: v6 })
     }
     const handleV7CheckboxChange = (index) => {
         // console.log(v1[index].eventName, v1[index].members)
@@ -108,7 +108,7 @@ export function EventForm({
             updatedData[index].members = null;
         }
         setv7(() => updatedData);
-        updateFields({v7: updatedData});
+        updateFields({ v7: updatedData });
     }
     const handleV8CheckboxChange = (index) => {
         // console.log(v1[index].eventName, v1[index].members)
@@ -120,19 +120,22 @@ export function EventForm({
             updatedData[index].members = null;
         }
         setv8(() => updatedData);
-        updateFields({vertical8: v8})
+        updateFields({ vertical8: v8 })
     }
 
     return (
         <FormWrapper title="Events">
-            <label className="container-event">Vertical1
+            <label className="container-event">
                 <h1 className="">Innoskill Engineering Drift and Design</h1>
                 <div className="events">
                     {
                         v1.map((data, index) => (
                             <div className="event-item" key={data.eventName}>
-                                <label>{data.eventName}</label>
-                                <input type="checkbox" onChange={() => handleV1CheckboxChange(index)} />
+                                <div className="event-item-label-input">
+                                    <label>{data.eventName}</label>
+                                    <input type="checkbox" onChange={() => handleV1CheckboxChange(index)} />
+                                    
+                                </div>
                                 <div>
                                     {
                                         data.members !== null &&
@@ -156,14 +159,17 @@ export function EventForm({
                 </div>
             </label>
 
-            <label className="container-event">Vertical2
+            <label className="container-event">
                 <h1 className="">Innoskill Business and Management Conundrum</h1>
                 <div className="events">
                     {
                         v2.map((data, index) => (
                             <div className="event-item" key={data.eventName}>
-                                <label>{data.eventName}</label>
-                                <input type="checkbox" onChange={() => handleV2CheckboxChange(index)} />
+                                <div className="event-item-label-input">
+                                    <label>{data.eventName}</label>
+                                    <input type="checkbox" onChange={() => handleV2CheckboxChange(index)} />
+                                    
+                                </div>
                                 <div>
                                     {
                                         data.members !== null &&
@@ -193,8 +199,11 @@ export function EventForm({
                     {
                         v3.map((data, index) => (
                             <div className="event-item" key={data.eventName}>
-                                <label>{data.eventName}</label>
-                                <input type="checkbox" onChange={() => handleV3CheckboxChange(index)} />
+                                <div className="event-item-label-input">
+                                    <label>{data.eventName}</label>
+                                    <input type="checkbox" onChange={() => handleV3CheckboxChange(index)} />
+                                    
+                                </div>
                                 <div>
                                     {
                                         data.members !== null &&
@@ -224,8 +233,11 @@ export function EventForm({
                     {
                         v4.map((data, index) => (
                             <div className="event-item" key={data.eventName}>
-                                <label>{data.eventName}</label>
-                                <input type="checkbox" onChange={() => handleV4CheckboxChange(index)} />
+                                <div className="event-item-label-input">
+                                    <label>{data.eventName}</label>
+                                    <input type="checkbox" onChange={() => handleV4CheckboxChange(index)} />
+                                    
+                                </div>
                                 <div>
                                     {
                                         data.members !== null &&
@@ -252,11 +264,14 @@ export function EventForm({
             <label className="container-event">
                 <h1 className="">Innoskill Culinary and Hospitality</h1>
                 <div className="events">
-                {
+                    {
                         v5.map((data, index) => (
                             <div className="event-item" key={data.eventName}>
-                                <label>{data.eventName}</label>
-                                <input type="checkbox" onChange={() => handleV5CheckboxChange(index)} />
+                                <div className="event-item-label-input">
+                                    <label>{data.eventName}</label>
+                                    <input type="checkbox" onChange={() => handleV5CheckboxChange(index)} />
+                                    
+                                </div>
                                 <div>
                                     {
                                         data.members !== null &&
@@ -283,11 +298,14 @@ export function EventForm({
             <label className="container-event">
                 <h1 className="">Innoskill Law Knot</h1>
                 <div className="events">
-                {
+                    {
                         v6.map((data, index) => (
                             <div className="event-item" key={data.eventName}>
-                                <label>{data.eventName}</label>
-                                <input type="checkbox" onChange={() => handleV6CheckboxChange(index)} />
+                                <div className="event-item-label-input">
+                                    <label>{data.eventName}</label>
+                                    <input type="checkbox" onChange={() => handleV6CheckboxChange(index)} />
+                                    
+                                </div>
                                 <div>
                                     {
                                         data.members !== null &&
@@ -314,11 +332,14 @@ export function EventForm({
             <label className="container-event">
                 <h1 className="">Innoskill Media and Literary Stumper</h1>
                 <div className="events">
-                {
+                    {
                         v7.map((data, index) => (
                             <div className="event-item" key={data.eventName}>
-                                <label>{data.eventName}</label>
-                                <input type="checkbox" onChange={() => handleV7CheckboxChange(index)} />
+                                <div className="event-item-label-input">
+                                    <label>{data.eventName}</label>
+                                    <input type="checkbox" onChange={() => handleV7CheckboxChange(index)} />
+                                    
+                                </div>
                                 <div>
                                     {
                                         data.members !== null &&
@@ -345,11 +366,14 @@ export function EventForm({
             <label className="container-event">
                 <h1 className="">Innoskill Social Spectrum</h1>
                 <div className="events">
-                {
+                    {
                         v8.map((data, index) => (
                             <div className="event-item" key={data.eventName}>
-                                <label>{data.eventName}</label>
-                                <input type="checkbox" onChange={() => handleV8CheckboxChange(index)} />
+                                <div className="event-item-label-input">
+                                    <label>{data.eventName}</label>
+                                    <input type="checkbox" onChange={() => handleV8CheckboxChange(index)} />
+                                    
+                                </div>
                                 <div>
                                     {
                                         data.members !== null &&

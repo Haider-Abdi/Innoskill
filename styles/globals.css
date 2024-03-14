@@ -4,27 +4,27 @@
 
 
 body{
-    background-image: url("../assets/background.jpg");
+    background-color: #eee;
     opacity: 0.925;
     font-family: "Poppins", sans-serif;
 }
 
-body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.7); 
-    z-index: -1;
-}
-.userFormInput {
-    @apply p-1.5 border rounded-lg focus:bg-gray-100 transition-all duration-150 text-gray-700
+
+.userFormContainer{
+    @apply flex flex-col gap-2 mb-3 bg-gray-700 hover:bg-gray-600 font-bold  p-4 rounded-xl
 }
 
+.userFormInput {
+    @apply p-1.5 transition-all duration-200 text-white border-b-2 border-t-0 border-l-0 border-r-0 focus:outline-none bg-transparent focus:border-yellow-500 
+}
+
+.userFormlabel {
+    @apply mb-2 
+}
+
+
 .container-event {
-    @apply flex flex-col gap-12 items-center my-3 bg-gray-700 p-2 rounded-xl text-slate-100
+    @apply flex flex-col gap-12 items-center my-3 bg-gray-700 py-5 rounded-xl text-slate-100
 }
 
 .container-event h1 {
@@ -32,11 +32,18 @@ body::before {
 }
 
 .events {
-    @apply flex flex-col gap-6
+    @apply flex flex-col gap-6 w-full
 }
 
 .event-item {
-    @apply flex flex-col items-center
+    @apply flex flex-col items-center justify-between gap-5 p-2
+}
+
+.event-item-label-input {
+    @apply flex flex-row justify-between items-center gap-10
+}
+.event-item-label-input label{
+    @apply w-2/3
 }
 
 .navbutton {
