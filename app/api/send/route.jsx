@@ -1,6 +1,6 @@
 import { write } from "@/utils/write";
 import { google } from "googleapis"
-
+ 
 export const POST = async (req) => {
     const {
         firstName,
