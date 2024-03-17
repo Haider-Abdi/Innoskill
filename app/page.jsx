@@ -24,59 +24,59 @@ const initalData = {
   rollNo: "",
   teamName: "",
   vertical1: [
-    { eventName: "Theme Based Model Demo (Srijan)", members: null },
-    { eventName: "Best out of Waste (Nav Shrijan)", members: null },
-    { eventName: "Code Debugging", members: null },
-    { eventName: "LAN Gaming", members: null },
-    { eventName: "BioGenius", members: null },
-    { eventName: "Vista Vibes- Video Blog", members: null },
-    { eventName: "Technical Memes", members: null },
-    { eventName: "Build a Circuit", members: null },
-    { eventName: "Workshop on 3D Printing", members: null },
-    { eventName: "Workshop on Laser Cutting and Design", members: null },
-    { eventName: "EV Quiz Challenge", members: null },
+    { eventName: "Theme Based Model Demo (Srijan)", members: null, price: 0 },
+    { eventName: "Best out of Waste (Nav Shrijan)", members: null, price: 0 },
+    { eventName: "Code Debugging", members: null, price: 0 },
+    { eventName: "LAN Gaming", members: null, price: 0 },
+    { eventName: "BioGenius", members: null, price: 0 },
+    { eventName: "Vista Vibes- Video Blog", members: null, price: 0 },
+    { eventName: "Technical Memes", members: null, price: 0 },
+    { eventName: "Build a Circuit", members: null, price: 0 },
+    { eventName: "Workshop on 3D Printing", members: null, price: 0 },
+    { eventName: "Workshop on Laser Cutting and Design", members: null, price: 0 },
+    { eventName: "EV Quiz Challenge", members: null, price: 0 },
   ],
   vertical2: [
-    { eventName: "Pro Launch 2024", members: null },
-    { eventName: "Ideattrakt", members: null },
-    { eventName: "Poster Making", members: null },
-    { eventName: "Finance Ki Pathshala", members: null },
+    { eventName: "Pro Launch 2024", members: null, price: 0 },
+    { eventName: "Ideattrakt", members: null, price: 0 },
+    { eventName: "Poster Making", members: null, price: 0 },
+    { eventName: "Finance Ki Pathshala", members: null, price: 0 },
   ],
   vertical3: [
-    { eventName: "Workshop on Somatotyping", members: null },
-    { eventName: "WellTech Innovate Challenge", members: null },
-    { eventName: "Best out of food waste challenge", members: null },
-    { eventName: "YuvaFlex Fusion Challenge", members: null },
-    { eventName: "Pseudo Recipe Competition", members: null },
-    { eventName: "Rescue Rangers Workshop", members: null },
+    { eventName: "Workshop on Somatotyping", members: null, price: 0 },
+    { eventName: "WellTech Innovate Challenge", members: null, price: 0 },
+    { eventName: "Best out of food waste challenge", members: null, price: 0 },
+    { eventName: "YuvaFlex Fusion Challenge", members: null, price: 0 },
+    { eventName: "Pseudo Recipe Competition", members: null, price: 0 },
+    { eventName: "Rescue Rangers Workshop", members: null, price: 0 },
   ],
   vertical4: [
-    { eventName: "Sustainathon", members: null },
-    { eventName: "Eco-reel", members: null },
-    { eventName: "My community My Ad", members: null },
-    { eventName: "Know your C-footprint", members: null },
+    { eventName: "Sustainathon", members: null, price: 0 },
+    { eventName: "Eco-reel", members: null, price: 0 },
+    { eventName: "My community My Ad", members: null, price: 0 },
+    { eventName: "Know your C-footprint", members: null, price: 0 },
   ],
   vertical5: [
-    { eventName: "Workshop on Coffee: Journey of coffee 'Bean to cup' supported by Lavazza", members: null },
-    { eventName: "Millet Cook off Challenge", members: null },
+    { eventName: "Workshop on Coffee: Journey of coffee 'Bean to cup' supported by Lavazza", members: null, price: 0 },
+    { eventName: "Millet Cook off Challenge", members: null, price: 0 },
   ],
   vertical6: [
-    { eventName: "Parliamentary Debate", members: null },
-    { eventName: "Manifesto", members: null },
-    { eventName: "Policy & Preamble Quiz", members: null },
-    { eventName: "Reformative Policy Drafting", members: null },
+    { eventName: "Parliamentary Debate", members: null, price: 0 },
+    { eventName: "Manifesto", members: null, price: 0 },
+    { eventName: "Policy & Preamble Quiz", members: null, price: 0 },
+    { eventName: "Reformative Policy Drafting", members: null, price: 0 },
   ],
   vertical7: [
-    { eventName: "Techno- Vogue 'Technology Fashion Walk'", members: null },
-    { eventName: "Spell Bee Competition 'Who will be the Spell Bee Champion'", members: null },
-    { eventName: "Innovoice 'RJ Hunt'", members: null },
-    { eventName: "SnapFlickShowdown: 'Reel Making Competition'", members: null },
+    { eventName: "Techno- Vogue 'Technology Fashion Walk'", members: null, price: 0 },
+    { eventName: "Spell Bee Competition 'Who will be the Spell Bee Champion'", members: null, price: 0 },
+    { eventName: "Innovoice 'RJ Hunt'", members: null, price: 0 },
+    { eventName: "SnapFlickShowdown: 'Reel Making Competition'", members: null, price: 0 },
   ],
   vertical8: [
-    { eventName: "Shark tank 2.O (AWAKE THE ENTERPRENEUR WITHIN YOU)", members: null },
-    { eventName: "PRAJAKIYA - The Rules of People 'Global Warming and Environment Conservation'", members: null },
-    { eventName: "Move To The Groove 'Exploring the inner self through creative movement'", members: null },
-    { eventName: "Screen Masters", members: null },
+    { eventName: "Shark tank 2.O (AWAKE THE ENTERPRENEUR WITHIN YOU)", members: null, price: 0 },
+    { eventName: "PRAJAKIYA - The Rules of People 'Global Warming and Environment Conservation'", members: null, price: 0 },
+    { eventName: "Move To The Groove 'Exploring the inner self through creative movement'", members: null, price: 0 },
+    { eventName: "Screen Masters", members: null, price: 0 },
   ],
 }
 
@@ -84,6 +84,7 @@ export default function Home() {
 
   const [data, setData] = useState(initalData)
   const [prices, setPrices] = useState(0);
+  const [fromUni, setFromUni] = useState(false);
 
   const updateFields = (fields) => {
     setData((prev) => {
@@ -92,10 +93,22 @@ export default function Home() {
   }
 
   const { steps, currentStepIndex, step, FirstStep, back, next, LastStep } = useMultiForm([
-    // <div className="font-bold text-2xl">Register Here</div>,
-    <UserForm {...data} updateFields={updateFields} />,
-    // <TeamForm {...data} updateFields={updateFields} />,
-    <EventForm {...data} updateFields={updateFields} prices={prices} setPrices={setPrices} />,
+    <UserForm {...data}
+      updateFields={updateFields}
+      prices={prices}
+      setPrices={setPrices}
+      fromUni={fromUni}
+      setFromUni={setFromUni}
+    />,
+
+    <EventForm {...data}
+      updateFields={updateFields}
+      prices={prices}
+      setPrices={setPrices}
+      fromUni={fromUni}
+      setFromUni={setFromUni}
+       />,
+
     <PaymentForm prices={prices} />,
   ])
 
@@ -128,7 +141,7 @@ export default function Home() {
         </div>
       </div>
       <div className="p-10 flex justify-center">
-        <form className="p-10 flex flex-col items-center bg-gradient-to-tr from-blue-950 to-yellow-950 text-white  rounded-xl w-1/2" onSubmit={handleSubmit}>
+        <form className="p-10 flex flex-col items-center bg-gradient-to-tr from-blue-950 to-yellow-950 text-white  rounded-xl md:w-1/2" onSubmit={handleSubmit}>
           {/* <div>
               {currentStepIndex + 1}/ {steps.length}
             </div> */}

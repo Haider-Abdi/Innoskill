@@ -13,7 +13,11 @@ export function UserForm({
     semester,
     rollNo,
     teamName,
-    updateFields
+    updateFields,
+    prices,
+    setPrices,
+    fromUni,
+    setFromUni
 }) {
     return (
         <FormWrapper title="Enter Your Details" subtitle={"Please Fill Your Personal Details To Proceed"}>
@@ -55,7 +59,11 @@ export function UserForm({
                 <div className="userFormContainer">
                     <label className="userFormLabel">Where Do You Study
                     </label>
-                    <select value={option} onChange={(e) => updateFields({ option: e.target.value })} className="p-2 w-full rounded-lg text-gray-800">
+                    <select value={option} onChange={(e) => {
+                        setFromUni(() => e.target.value !== "School")
+                        updateFields({ option: e.target.value });
+
+                    }} className="p-2 w-full rounded-lg text-gray-800">
                         <option value={"School"}>School</option>
                         <option value={"University"}>University</option>
                     </select>
