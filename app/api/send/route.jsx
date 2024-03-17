@@ -24,8 +24,8 @@ export const POST = async (req) => {
         v7
     } = await req.json()
 
-
     const auth = await google.auth.getClient({
+        credentials: JSON.parse(process.env.SECRETS_JSON),
         scopes: ['https://www.googleapis.com/auth/spreadsheets']
     })
 
