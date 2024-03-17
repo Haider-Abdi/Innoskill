@@ -45,14 +45,14 @@ export function UserForm({
                 <div className="userFormContainer">
 
                     <label className="userFormLabel">Age</label>
-                    <input required min={1} type="number" className="userFormInput" value={age} onChange={e => updateFields({ age: e.target.value })} />
+                    <input required min={1} type="text" className="userFormInput" value={age} onChange={e => updateFields({ age: e.target.value })} />
                 </div>
 
 
                 <div className="userFormContainer">
 
                     <label className="userFormLabel">Contact Number</label>
-                    <input required min={1} type="number" className="userFormInput" value={phone} onChange={e => updateFields({ phone: e.target.value })} />
+                    <input required min={1} type="text" className="userFormInput" value={phone} onChange={e => updateFields({ phone: e.target.value })} />
                 </div>
 
 

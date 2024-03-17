@@ -1,6 +1,11 @@
 "use client";
 import { useState } from "react"
 
+/**
+ * A custom hook for managing multi-step forms.
+ * @param {Array} steps - An array containing the steps of the form.
+ * @returns {Object} An object containing functions and state variables for managing the form.
+ */
 export const useMultiForm = (steps) => {
     const [currentStepIndex, setCurrentStepIndex] = useState(0);
 
